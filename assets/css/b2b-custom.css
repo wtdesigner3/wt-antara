@@ -2293,6 +2293,14 @@ body {
     align-items: center;
   }
 
+  /* CRITICAL: Explicitly hide desktop menu in header so it never causes FOUC / layout flash on initial load before meanmenu.js runs */
+  .header-1 .mean__menu-wrapper,
+  .header-1 .main-menu,
+  .header-1 #mobile-menu,
+  .header-1 .mean-nav {
+    display: none !important;
+  }
+
   .header-1 .header-logo {
     display: none !important;
   }
@@ -2305,6 +2313,23 @@ body {
     height: 52px !important;
     width: auto;
   }
+}
+
+/* Offcanvas Drawer Initial State Safeguard */
+.offcanvas__info:not(.info-open) {
+  transform: translateX(120%) !important;
+  visibility: hidden !important;
+}
+
+.offcanvas__info.info-open {
+  transform: translateX(0) !important;
+  visibility: visible !important;
+}
+
+.offcanvas__overlay:not(.overlay-open) {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 /* Mobile Symmetric Container Spacing (< 768px) */
