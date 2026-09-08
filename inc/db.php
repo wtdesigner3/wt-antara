@@ -27,6 +27,8 @@ if ($is_localhost) {
     $db_name = 'u345262298_antara';
 }
 
+
+
 // Establish Connection
 if (!isset($conn) || !$conn) {
     if (function_exists('mysqli_report')) {
