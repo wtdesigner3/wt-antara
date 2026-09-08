@@ -10,7 +10,6 @@ jobs:
   web-deploy:
     name: Sync to Hostinger Server
     runs-on: ubuntu-latest
-    if: ${{ secrets.FTP_SERVER != '' }}
     steps:
       - name: 🚚 Checkout Latest Code
         uses: actions/checkout@v4
