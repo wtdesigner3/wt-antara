@@ -65,19 +65,17 @@ $export_nav_products = get_products_by_division('export');
          ========================================================================== -->
     <div id="antaraPreloader" class="antara-preloader">
         <div class="antara-preloader-content">
-            <div class="preloader-brand-card">
-                <div class="preloader-glow-aura"></div>
-                <div class="preloader-orbit-ring ring-1"></div>
-                <div class="preloader-orbit-ring ring-2"></div>
-                <div class="preloader-logo-core">
-                    <img src="<?= clean_output(!empty($profile['pro_logo']) ? $profile['pro_logo'] : 'assets/img/logo/antara-logo-white.svg') ?>" alt="Antara Globale" class="preloader-logo-img">
+            <div class="preloader-logo-wrap">
+                <div class="preloader-ambient-glow"></div>
+                <img src="<?= clean_output(!empty($profile['pro_logo']) ? $profile['pro_logo'] : 'assets/img/logo/antara-logo-white.svg') ?>" alt="Antara Globale" class="preloader-logo-img">
+            </div>
+            <div class="preloader-loader-wrap">
+                <div class="preloader-line-track">
+                    <div class="preloader-line-glow"></div>
                 </div>
             </div>
-            <div class="preloader-progress-wrap">
-                <div class="preloader-progress-bar"></div>
-            </div>
             <div class="preloader-brand-meta">
-                <span class="preloader-tagline">EXCELLENCE IN COMMODITY EXPORT</span>
+                <span class="preloader-tagline">INDIAN COMMODITIES &bull; GLOBAL EXPORT</span>
             </div>
         </div>
     </div>

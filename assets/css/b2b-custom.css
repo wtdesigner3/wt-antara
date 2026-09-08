@@ -4152,7 +4152,7 @@ textarea.compact-input,
 }
 
 /* ==========================================================================
-   Antara Globale Ultra-Premium Executive Preloader
+   Antara Globale Ultra-Premium Clean Frameless Preloader
    ========================================================================== */
 .antara-preloader {
   position: fixed !important;
@@ -4160,7 +4160,7 @@ textarea.compact-input,
   left: 0 !important;
   width: 100vw !important;
   height: 100vh !important;
-  background: radial-gradient(circle at 50% 45%, #102B1E 0%, #08160F 65%, #050E0A 100%) !important;
+  background: radial-gradient(circle at 50% 48%, #0E291D 0%, #08160F 60%, #040A07 100%) !important;
   z-index: 99999999 !important;
   display: flex !important;
   align-items: center !important;
@@ -4184,161 +4184,123 @@ textarea.compact-input,
   text-align: center;
   position: relative;
   z-index: 2;
-  padding: 24px;
+  padding: 20px;
 }
 
-.preloader-brand-card {
+/* Frameless Floating Logo Wrap with Ambient Radial Light */
+.preloader-logo-wrap {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
 }
 
-.preloader-glow-aura {
+.preloader-ambient-glow {
   position: absolute;
-  width: 240px;
-  height: 100px;
-  background: radial-gradient(ellipse at center, rgba(197, 160, 89, 0.28) 0%, transparent 70%);
-  border-radius: 50%;
-  filter: blur(12px);
+  width: 320px;
+  height: 150px;
+  background: radial-gradient(ellipse at center, rgba(197, 160, 89, 0.22) 0%, rgba(197, 160, 89, 0.05) 50%, transparent 75%);
+  filter: blur(28px);
   pointer-events: none;
-  animation: antaraAuraPulse 3s ease-in-out infinite alternate;
-}
-
-.preloader-orbit-ring {
-  position: absolute;
-  border-radius: 20px;
-  pointer-events: none;
-}
-
-.preloader-orbit-ring.ring-1 {
-  width: calc(100% + 20px);
-  height: calc(100% + 20px);
-  border: 1.5px solid transparent;
-  border-top-color: #C5A059;
-  border-bottom-color: rgba(197, 160, 89, 0.3);
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(197, 160, 89, 0.25);
-  animation: antaraPreloaderPulseBorder 2s ease-in-out infinite;
-}
-
-.preloader-orbit-ring.ring-2 {
-  width: calc(100% + 10px);
-  height: calc(100% + 10px);
-  border: 1px solid transparent;
-  border-left-color: rgba(229, 195, 120, 0.5);
-  border-right-color: rgba(229, 195, 120, 0.5);
-  border-radius: 16px;
-}
-
-.preloader-logo-core {
-  position: relative;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 36px;
-  background: rgba(14, 38, 27, 0.82);
-  border: 1px solid rgba(197, 160, 89, 0.45);
-  border-radius: 14px;
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(197, 160, 89, 0.15);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  animation: antaraPulseCore 2.4s ease-in-out infinite;
+  animation: antaraAmbientBreathe 2.8s ease-in-out infinite alternate;
 }
 
 .preloader-logo-img {
-  width: 220px;
-  max-width: 75vw;
+  position: relative;
+  z-index: 2;
+  width: 240px;
+  max-width: 82vw;
   height: auto;
-  max-height: 72px;
+  max-height: 75px;
   object-fit: contain;
   display: block;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.75));
+  animation: antaraLogoFloat 2.8s ease-in-out infinite;
 }
 
-.preloader-progress-wrap {
-  width: 220px;
-  max-width: 75vw;
-  height: 3px;
+/* Sleek Minimalist Gold Shimmer Line */
+.preloader-loader-wrap {
+  position: relative;
+  width: 200px;
+  max-width: 70vw;
+  margin-bottom: 18px;
+}
+
+.preloader-line-track {
+  width: 100%;
+  height: 2px;
   background: rgba(255, 255, 255, 0.08);
-  border-radius: 6px;
+  border-radius: 4px;
   overflow: hidden;
   position: relative;
-  margin-bottom: 16px;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
-.preloader-progress-bar {
+.preloader-line-glow {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -50%;
+  width: 50%;
   height: 100%;
-  width: 60%;
-  background: linear-gradient(90deg, transparent, #C5A059, #FFF0C2, #C5A059, transparent);
-  border-radius: 6px;
-  animation: antaraProgressGlide 1.6s ease-in-out infinite;
+  background: linear-gradient(90deg, transparent, #C5A059 40%, #FFF2CE 60%, #C5A059 80%, transparent);
+  box-shadow: 0 0 10px rgba(197, 160, 89, 0.7);
+  animation: antaraShimmerSweep 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 .preloader-brand-meta {
-  margin-top: 2px;
+  margin-top: 0;
 }
 
 .preloader-tagline {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 11.5px;
-  font-weight: 700;
+  font-size: 11px;
+  font-weight: 600;
   letter-spacing: 3.5px;
   color: #C5A059;
   text-transform: uppercase;
   display: inline-block;
-  opacity: 0.95;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-  animation: antaraFadeSubtle 2s ease-in-out infinite alternate;
+  opacity: 0.85;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+  animation: antaraTaglinePulse 2.8s ease-in-out infinite alternate;
 }
 
 @media (max-width: 575px) {
-  .preloader-logo-core {
-    padding: 12px 24px !important;
-  }
-
   .preloader-logo-img {
-    width: 175px !important;
-    max-height: 56px !important;
+    width: 195px !important;
+    max-height: 60px !important;
   }
 
-  .preloader-progress-wrap {
-    width: 175px !important;
+  .preloader-ambient-glow {
+    width: 240px !important;
+    height: 110px !important;
+  }
+
+  .preloader-loader-wrap {
+    width: 160px !important;
   }
 
   .preloader-tagline {
-    font-size: 10px !important;
+    font-size: 9.5px !important;
     letter-spacing: 2.5px !important;
   }
 }
 
-@keyframes antaraAuraPulse {
-  0% { transform: scale(0.9); opacity: 0.5; }
-  100% { transform: scale(1.15); opacity: 0.9; }
+@keyframes antaraAmbientBreathe {
+  0% { transform: scale(0.85); opacity: 0.4; }
+  100% { transform: scale(1.15); opacity: 0.85; }
 }
 
-@keyframes antaraPreloaderPulseBorder {
-  0%, 100% { transform: scale(1); opacity: 0.6; }
-  50% { transform: scale(1.03); opacity: 1; }
+@keyframes antaraLogoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
 }
 
-@keyframes antaraPulseCore {
-  0%, 100% { transform: scale(1); box-shadow: 0 10px 32px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(197, 160, 89, 0.15); }
-  50% { transform: scale(1.02); box-shadow: 0 12px 38px rgba(197, 160, 89, 0.35), inset 0 0 25px rgba(197, 160, 89, 0.28); }
-}
-
-@keyframes antaraProgressGlide {
-  0% { left: -60%; }
+@keyframes antaraShimmerSweep {
+  0% { left: -50%; }
   100% { left: 100%; }
 }
 
-@keyframes antaraFadeSubtle {
-  0% { opacity: 0.65; }
+@keyframes antaraTaglinePulse {
+  0% { opacity: 0.6; }
   100% { opacity: 1; }
 }
