@@ -7,7 +7,46 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-require_once __DIR__ . '/db_config.php';
+// ==============================================================================
+// 1. DATABASE CONFIGURATION (Direct & Simple)
+// ==============================================================================
+$is_localhost = in_array($_SERVER['SERVER_NAME'] ?? 'localhost', ['localhost', '127.0.0.1', '::1']) 
+                || php_sapi_name() === 'cli';
+
+if ($is_localhost) {
+    // Localhost / XAMPP
+    $db_host = 'localhost';
+    $db_user = 'root';
+    $db_pass = '';
+    $db_name = 'anahat_db';
+} else {
+    // Live Server (Hostinger)
+    $db_host = 'localhost';
+    $db_user = 'u345262298_antara_user';
+    $db_pass = 'YOUR_DB_PASSWORD'; // <-- Set your Hostinger database password here
+    $db_name = 'u345262298_antara';
+}
+
+// Establish Connection
+if (!isset($conn) || !$conn) {
+    if (function_exists('mysqli_report')) {
+        mysqli_report(MYSQLI_REPORT_OFF);
+    }
+    $conn = @mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+
+    if (!$conn) {
+        $err = mysqli_connect_error();
+        die("<div style='font-family:sans-serif;background:#0A1C14;color:#FFF;padding:40px;text-align:center;'>
+            <div style='background:#112A1E;border:1px solid #C5A059;padding:30px;border-radius:12px;max-width:600px;margin:30px auto;text-align:left;'>
+                <h2 style='color:#C5A059;margin-top:0;'>Antara Globale &bull; Database Connection Error</h2>
+                <p>Could not connect to database <code>$db_name</code> with user <code>$db_user</code>.</p>
+                <p><strong>MySQL Error:</strong> $err</p>
+                <p>Please edit <code>inc/db.php</code> around line 23 and set your Hostinger database password.</p>
+            </div>
+        </div>");
+    }
+    mysqli_set_charset($conn, "utf8mb4");
+}
 
 // Site Configuration
 define('SITE_NAME', 'Antara Globale');

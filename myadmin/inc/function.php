@@ -7,7 +7,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-require_once __DIR__ . '/../../inc/db_config.php';
+require_once __DIR__ . '/../../inc/db.php';
 
 // Define site constants used across admin panel
 if (!defined('SITE_NAME')) define('SITE_NAME', 'Antara Globale');
