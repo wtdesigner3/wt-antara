@@ -60,6 +60,50 @@ $export_nav_products = get_products_by_division('export');
 </head>
 
 <body>
+    <!-- ==========================================================================
+         Antara Globale Executive B2B Preloader
+         ========================================================================== -->
+    <div id="antaraPreloader" class="antara-preloader">
+        <div class="antara-preloader-content">
+            <div class="preloader-spinner-wrapper">
+                <div class="preloader-orbit-ring ring-1"></div>
+                <div class="preloader-orbit-ring ring-2"></div>
+                <div class="preloader-logo-core">
+                    <img src="<?= clean_output(!empty($profile['pro_logo']) ? $profile['pro_logo'] : 'assets/img/logo/antara-logo-white.svg') ?>" alt="Antara Globale" class="preloader-logo-img">
+                </div>
+            </div>
+            <div class="preloader-progress-wrap">
+                <div class="preloader-progress-bar"></div>
+            </div>
+            <div class="preloader-brand-meta">
+                <span class="preloader-tagline">EXCELLENCE IN COMMODITY EXPORT</span>
+            </div>
+        </div>
+    </div>
+    <script>
+    (function() {
+        function hideAntaraLoader() {
+            var loader = document.getElementById('antaraPreloader');
+            if (loader && !loader.classList.contains('antara-preloader-fade')) {
+                loader.classList.add('antara-preloader-fade');
+                setTimeout(function() {
+                    if (loader && loader.parentNode) {
+                        loader.style.display = 'none';
+                    }
+                }, 550);
+            }
+        }
+        if (document.readyState === 'complete') {
+            setTimeout(hideAntaraLoader, 300);
+        } else {
+            window.addEventListener('load', function() {
+                setTimeout(hideAntaraLoader, 300);
+            });
+            setTimeout(hideAntaraLoader, 1400);
+        }
+    })();
+    </script>
+
     <!-- Back To Top Start -->
     <button id="back-top" class="back-to-top theme-bg-2">
         <i class="fa-regular fa-arrow-up"></i>
