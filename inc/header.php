@@ -65,7 +65,8 @@ $export_nav_products = get_products_by_division('export');
          ========================================================================== -->
     <div id="antaraPreloader" class="antara-preloader">
         <div class="antara-preloader-content">
-            <div class="preloader-spinner-wrapper">
+            <div class="preloader-brand-card">
+                <div class="preloader-glow-aura"></div>
                 <div class="preloader-orbit-ring ring-1"></div>
                 <div class="preloader-orbit-ring ring-2"></div>
                 <div class="preloader-logo-core">
