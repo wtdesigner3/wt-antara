@@ -23,7 +23,7 @@ if ($is_localhost) {
     // Live Server (Hostinger)
     $db_host = 'localhost';
     $db_user = 'u345262298_antara_user';
-    $db_pass = 'YOUR_DB_PASSWORD'; // <-- Set your Hostinger database password here
+    $db_pass = 'hJ^5e9JJq'; 
     $db_name = 'u345262298_antara';
 }
 
