@@ -37,4 +37,6 @@ jobs:
             **/temp_*.php
             **/node_modules/**
             **/inc/db_config.prod.php
+            **/_unused_backup/**
+            **/_demo_templates_archive/**
             **/scratch/**

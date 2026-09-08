@@ -11,6 +11,7 @@ inc/db_config.local.php
 # ==============================================================================
 antara-globale/
 _demo_templates_archive/
+_unused_backup/
 antara.zip
 myadmin.zip
 *.zip

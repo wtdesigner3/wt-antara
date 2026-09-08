@@ -6,7 +6,7 @@
 DirectoryIndex index.php index.html
 
 # 2. Custom Error Documents
-ErrorDocument 404 /404.html
+ErrorDocument 404 /404.php
 
 # 3. Dynamic URL Rewriting (Category & Division Based Clean Slugs)
 <IfModule mod_rewrite.c>
