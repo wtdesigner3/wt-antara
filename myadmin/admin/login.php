@@ -139,17 +139,17 @@ if (isset($_POST['login'])) {
 			</div>
 		<?php endif; ?>
 
-		<form method="POST" action="login.php">
+		<form method="POST" action="login.php" autocomplete="off">
 			<div class="mb-3">
 				<label class="form-label">Username</label>
 				<div class="position-relative">
-					<input type="text" name="username" class="form-control" placeholder="Enter admin username" value="admin" required autofocus>
+					<input type="text" name="username" class="form-control" placeholder="Enter admin username" required autofocus autocomplete="username">
 				</div>
 			</div>
 
 			<div class="mb-4">
 				<label class="form-label">Password</label>
-				<input type="password" name="password" class="form-control" placeholder="Enter admin password" value="admin123" required>
+				<input type="password" name="password" class="form-control" placeholder="Enter admin password" required autocomplete="current-password">
 			</div>
 
 			<button type="submit" name="login" class="btn-login">
