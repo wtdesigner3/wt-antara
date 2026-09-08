@@ -123,10 +123,10 @@ $export_nav_products = get_products_by_division('export');
     <div class="offcanvas__overlay"></div>
 
     <!-- Header Section Start -->
-    <header id="header-sticky" class="header-1 <?= ($active_nav != 'home') ? 'header-2' : '' ?>">
+    <header id="header-sticky" class="header-1">
         <div class="container-fluid px-lg-5">
             <div class="mega-menu-wrapper">
-                <div class="header-main <?= ($active_nav != 'home') ? 'header-inner' : '' ?> py-2">
+                <div class="header-main py-2">
                     <div class="header-left">
                         <div class="logo">
                             <a href="index.php" class="header-logo">
