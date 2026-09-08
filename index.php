@@ -265,7 +265,7 @@ if ($has_home_about_head || $has_home_about_body || $has_home_about_img):
                         <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Retail Brands</span>
                         <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Food Manufacturers</span>
                     </div>                    <div class="mt-auto pt-3">
-                        <a href="product/product-arabica" class="theme-btn btn-sm">
+                        <a href="export/product-arabica" class="theme-btn btn-sm">
                             Explore Export Commodities <i class="fa-solid fa-arrow-right ms-1"></i>
                         </a>
                     </div>
@@ -296,7 +296,7 @@ if ($has_home_about_head || $has_home_about_body || $has_home_about_img):
                         <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Hotel &amp; Resort Groups</span>
                     </div>
                     <div class="mt-auto pt-3">
-                        <a href="product/supply-coffee" class="theme-btn btn-sm">
+                        <a href="restaurant/supply-coffee" class="theme-btn btn-sm">
                             Explore Restaurant &amp; Café Supplies <i class="fa-solid fa-arrow-right ms-1"></i>
                         </a>
                     </div>
@@ -343,17 +343,17 @@ if ($has_home_about_head || $has_home_about_body || $has_home_about_img):
                                 <div class="b2b-card-bg">
                                     <img src="<?= htmlspecialchars($prod['image']) ?>" alt="<?= htmlspecialchars($prod['name']) ?>">
                                 </div>
-                                <a href="product/<?= htmlspecialchars($prod['slug']) ?>" class="b2b-card-circle-btn" title="View Specifications">
+                                <a href="export/<?= htmlspecialchars($prod['slug']) ?>" class="b2b-card-circle-btn" title="View Specifications">
                                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                 </a>
                                 <div class="b2b-card-glass-bottom">
                                     <h3 class="b2b-card-glass-title">
-                                        <a href="product/<?= htmlspecialchars($prod['slug']) ?>"><?= htmlspecialchars($prod['name']) ?></a>
+                                        <a href="export/<?= htmlspecialchars($prod['slug']) ?>"><?= htmlspecialchars($prod['name']) ?></a>
                                     </h3>
                                     <div class="b2b-card-glass-sub">
                                         <i class="fa-solid fa-location-dot text-warning me-1"></i> <?= htmlspecialchars($prod['tagline']) ?>
                                     </div>
-                                    <a href="product/<?= htmlspecialchars($prod['slug']) ?>" class="b2b-btn-white-pill">
+                                    <a href="export/<?= htmlspecialchars($prod['slug']) ?>" class="b2b-btn-white-pill">
                                         View Product <i class="fa-solid fa-arrow-right"></i>
                                     </a>
                                 </div>
@@ -384,7 +384,7 @@ if ($has_home_about_head || $has_home_about_body || $has_home_about_img):
                 </p>
             </div>
             <div class="mt-3 mt-md-0">
-                <a href="product/supply-coffee" class="theme-btn">
+                <a href="restaurant/supply-coffee" class="theme-btn">
                     View Foodservice Catalog <i class="fa-solid fa-arrow-right ms-1"></i>
                 </a>
             </div>
@@ -397,17 +397,17 @@ if ($has_home_about_head || $has_home_about_body || $has_home_about_img):
                         <div class="b2b-card-bg">
                             <img src="<?= htmlspecialchars($hp['image']) ?>" alt="<?= htmlspecialchars($hp['name']) ?>">
                         </div>
-                        <a href="product/<?= htmlspecialchars($hp['slug']) ?>" class="b2b-card-circle-btn" title="View Product Details">
+                        <a href="restaurant/<?= htmlspecialchars($hp['slug']) ?>" class="b2b-card-circle-btn" title="View Product Details">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
                         <div class="b2b-card-glass-bottom">
                             <h3 class="b2b-card-glass-title">
-                                <a href="product/<?= htmlspecialchars($hp['slug']) ?>"><?= htmlspecialchars($hp['name']) ?></a>
+                                <a href="restaurant/<?= htmlspecialchars($hp['slug']) ?>"><?= htmlspecialchars($hp['name']) ?></a>
                             </h3>
                             <div class="b2b-card-glass-sub">
                                 <i class="fa-solid fa-utensils text-warning me-1"></i> <?= htmlspecialchars($hp['tagline']) ?>
                             </div>
-                            <a href="product/<?= htmlspecialchars($hp['slug']) ?>" class="b2b-btn-white-pill">
+                            <a href="restaurant/<?= htmlspecialchars($hp['slug']) ?>" class="b2b-btn-white-pill">
                                 View Product <i class="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
@@ -434,7 +434,7 @@ if ($has_home_about_head || $has_home_about_body || $has_home_about_img):
                 </p>
             </div>
             <div class="mt-3 mt-md-0">
-                <a href="product/product-arabica" class="theme-btn border-btn">
+                <a href="export/product-arabica" class="theme-btn border-btn">
                     Explore Origin Products <i class="fa-solid fa-arrow-right ms-1"></i>
                 </a>
             </div>

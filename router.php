@@ -32,9 +32,9 @@ if ($uri === '/restaurant-cafe-supply' || $uri === '/restaurant-cafe-supply/') {
     exit;
 }
 
-// Clean Product Route: /product/{slug}
-if (preg_match('#^/product/([a-zA-Z0-9_-]+)/?$#', $uri, $matches)) {
-    $_GET['slug'] = $matches[1];
+// Category-based Clean Product Route: /export/{slug}, /restaurant/{slug}, /horeca/{slug}, /product/{slug}
+if (preg_match('#^/(export|restaurant|horeca|product)/([a-zA-Z0-9_-]+)/?$#', $uri, $matches)) {
+    $_GET['slug'] = $matches[2];
     require __DIR__ . '/product-detail.php';
     exit;
 }

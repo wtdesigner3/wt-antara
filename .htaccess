@@ -8,7 +8,7 @@ DirectoryIndex index.php index.html
 # 2. Custom Error Documents
 ErrorDocument 404 /404.html
 
-# 3. Dynamic URL Rewriting (Clean SEO Slugs for Inner Pages & Products)
+# 3. Dynamic URL Rewriting (Category & Division Based Clean Slugs)
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
@@ -25,7 +25,15 @@ ErrorDocument 404 /404.html
     RewriteRule ^export-supply/?$ export-supply.php [L,QSA]
     RewriteRule ^restaurant-cafe-supply/?$ restaurant-cafe-supply.php [L,QSA]
 
-    # Clean Dynamic Product & Commodity Routes: /product/product-tea
+    # Category-Specific Dynamic Clean Product Routes:
+    # Export Division: /export/product-tea
+    RewriteRule ^export/([a-zA-Z0-9_-]+)/?$ product-detail.php?slug=$1 [L,QSA]
+
+    # Restaurant & Cafe / HORECA Division: /restaurant/supply-sugar
+    RewriteRule ^restaurant/([a-zA-Z0-9_-]+)/?$ product-detail.php?slug=$1 [L,QSA]
+    RewriteRule ^horeca/([a-zA-Z0-9_-]+)/?$ product-detail.php?slug=$1 [L,QSA]
+
+    # Generic product route fallback: /product/slug
     RewriteRule ^product/([a-zA-Z0-9_-]+)/?$ product-detail.php?slug=$1 [L,QSA]
 
     # Clean Dynamic Blog Article Routes: /blog/top-10-indian-spices

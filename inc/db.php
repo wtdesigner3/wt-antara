@@ -97,6 +97,21 @@ function get_product($identifier) {
 }
 
 /**
+ * Generate Clean Category/Division-Based Product URL (e.g. export/product-tea or restaurant/supply-sugar)
+ */
+function get_product_url($product_or_slug) {
+    if (is_array($product_or_slug)) {
+        $division = strtolower($product_or_slug['division'] ?? 'export');
+        $slug = $product_or_slug['slug'] ?? '';
+    } else {
+        $slug = (string)$product_or_slug;
+        $division = (strpos($slug, 'supply-') === 0) ? 'horeca' : 'export';
+    }
+    $folder = ($division === 'horeca' || $division === 'restaurant') ? 'restaurant' : 'export';
+    return $folder . '/' . urlencode($slug);
+}
+
+/**
  * Fetch Dynamic Hero Carousel Slides
  */
 function get_hero_slides() {

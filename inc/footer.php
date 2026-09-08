@@ -65,12 +65,12 @@ $profile = get_site_profile();
                                 <h4 class="text-white fw-bold" style="font-size: 18px;">Export Division</h4>
                             </div>
                             <ul class="list-unstyled text-white text-opacity-75 d-flex flex-column gap-2" style="font-size: 14px;">
-                                <li><a href="product/product-arabica" class="text-white text-opacity-75 text-decoration-none hover-gold">Arabica Coffee Beans</a></li>
-                                <li><a href="product/product-robusta" class="text-white text-opacity-75 text-decoration-none hover-gold">Robusta Coffee Beans</a></li>
-                                <li><a href="product/product-tea" class="text-white text-opacity-75 text-decoration-none hover-gold">Indian Bulk Tea</a></li>
-                                <li><a href="product/product-black-pepper" class="text-white text-opacity-75 text-decoration-none hover-gold">Malabar Black Pepper</a></li>
-                                <li><a href="product/product-turmeric" class="text-white text-opacity-75 text-decoration-none hover-gold">Alleppey Turmeric</a></li>
-                                <li><a href="product/product-arabica" class="text-white text-opacity-75 text-decoration-none hover-gold">Specialty Export Lots</a></li>
+                                <li><a href="export/product-arabica" class="text-white text-opacity-75 text-decoration-none hover-gold">Arabica Coffee Beans</a></li>
+                                <li><a href="export/product-robusta" class="text-white text-opacity-75 text-decoration-none hover-gold">Robusta Coffee Beans</a></li>
+                                <li><a href="export/product-tea" class="text-white text-opacity-75 text-decoration-none hover-gold">Indian Bulk Tea</a></li>
+                                <li><a href="export/product-black-pepper" class="text-white text-opacity-75 text-decoration-none hover-gold">Malabar Black Pepper</a></li>
+                                <li><a href="export/product-turmeric" class="text-white text-opacity-75 text-decoration-none hover-gold">Alleppey Turmeric</a></li>
+                                <li><a href="export/product-arabica" class="text-white text-opacity-75 text-decoration-none hover-gold">Specialty Export Lots</a></li>
                             </ul>
                         </div>
                     </div>
@@ -82,12 +82,12 @@ $profile = get_site_profile();
                                 <h4 class="text-white fw-bold" style="font-size: 18px;">Restaurant &amp; Café</h4>
                             </div>
                             <ul class="list-unstyled text-white text-opacity-75 d-flex flex-column gap-2" style="font-size: 14px;">
-                                <li><a href="product/supply-coffee" class="text-white text-opacity-75 text-decoration-none hover-gold">Coffee Solutions</a></li>
-                                <li><a href="product/supply-matcha" class="text-white text-opacity-75 text-decoration-none hover-gold">Ceremonial Matcha</a></li>
-                                <li><a href="product/supply-sauces" class="text-white text-opacity-75 text-decoration-none hover-gold">Sauces &amp; Condiments (Veeba)</a></li>
-                                <li><a href="product/supply-syrups" class="text-white text-opacity-75 text-decoration-none hover-gold">Artisanal Barista Syrups</a></li>
-                                <li><a href="product/supply-sugar" class="text-white text-opacity-75 text-decoration-none hover-gold">Commercial Sugar Sachets</a></li>
-                                <li><a href="product/supply-green-coffee" class="text-white text-opacity-75 text-decoration-none hover-gold">Green Beans for Roasters</a></li>
+                                <li><a href="restaurant/supply-coffee" class="text-white text-opacity-75 text-decoration-none hover-gold">Coffee Solutions</a></li>
+                                <li><a href="restaurant/supply-matcha" class="text-white text-opacity-75 text-decoration-none hover-gold">Ceremonial Matcha</a></li>
+                                <li><a href="restaurant/supply-sauces" class="text-white text-opacity-75 text-decoration-none hover-gold">Sauces &amp; Condiments (Veeba)</a></li>
+                                <li><a href="restaurant/supply-syrups" class="text-white text-opacity-75 text-decoration-none hover-gold">Artisanal Barista Syrups</a></li>
+                                <li><a href="restaurant/supply-sugar" class="text-white text-opacity-75 text-decoration-none hover-gold">Commercial Sugar Sachets</a></li>
+                                <li><a href="restaurant/supply-green-coffee" class="text-white text-opacity-75 text-decoration-none hover-gold">Green Beans for Roasters</a></li>
                             </ul>
                         </div>
                     </div>
