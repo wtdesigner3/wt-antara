@@ -732,19 +732,30 @@ h6 {
    Symmetric Commodity Product Cards & Swiper Carousel (Refined & Compact)
    ========================================================================== */
 .product-swiper-container {
-  padding: 16px 4px 30px;
-  margin-top: -12px;
+  padding: 10px 4px 24px;
   position: relative;
+  overflow: visible;
 }
 
-.product-swiper-active .swiper-wrapper {
+.product-swiper-active,
+.related-product-swiper-active {
+  padding: 20px 8px 32px !important;
+  margin: -20px -8px -32px !important;
+  overflow: hidden;
+}
+
+.product-swiper-active .swiper-wrapper,
+.related-product-swiper-active .swiper-wrapper {
   display: flex;
   align-items: stretch;
 }
 
-.product-swiper-active .swiper-slide {
+.product-swiper-active .swiper-slide,
+.related-product-swiper-active .swiper-slide {
   height: auto;
   display: flex;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 /* ==========================================================================
@@ -760,7 +771,7 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1);
   background: #11281E;
   width: 100%;
 }
