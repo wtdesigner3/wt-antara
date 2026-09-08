@@ -13,6 +13,10 @@ ErrorDocument 404 /404.php
     RewriteEngine On
     RewriteBase /
 
+    # Canonical 301 Redirect: Strip /index.php or /index to root /
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(index\.php|index)(\?|\ |\$) [NC]
+    RewriteRule ^(index\.php|index)$ / [R=301,L]
+
     # Don't rewrite real existing files or directories
     RewriteCond %{REQUEST_FILENAME} -f [OR]
     RewriteCond %{REQUEST_FILENAME} -d

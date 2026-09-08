@@ -12,7 +12,7 @@ $profile = get_site_profile();
                     <div class="col-xl-4 col-lg-5 col-md-6">
                         <div class="single-footer-widget">
                             <div class="widget-head mb-4">
-                                <a href="index.php">
+                                <a href="/">
                                     <img src="<?= clean_output(!empty($profile['pro_logo']) ? $profile['pro_logo'] : 'assets/img/logo/antara-logo-white.svg') ?>" alt="Antara Globale" style="max-height: 52px;">
                                 </a>
                             </div>

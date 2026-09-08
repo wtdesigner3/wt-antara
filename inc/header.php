@@ -115,7 +115,7 @@ $export_nav_products = get_products_by_division('export');
                 <div class="offcanvas__content">
                     <div class="offcanvas__top mb-4 d-flex justify-content-between align-items-center">
                         <div class="offcanvas__logo">
-                            <a href="index.php">
+                            <a href="/">
                                 <img src="<?= clean_output(!empty($profile['pro_dark_logo']) ? $profile['pro_dark_logo'] : 'assets/img/logo/antara-logo-dark.svg') ?>" alt="Antara Globale Logo" style="max-height: 48px;">
                             </a>
                         </div>
@@ -172,10 +172,10 @@ $export_nav_products = get_products_by_division('export');
                 <div class="header-main py-2">
                     <div class="header-left">
                         <div class="logo">
-                            <a href="index.php" class="header-logo">
+                            <a href="/" class="header-logo">
                                 <img src="<?= clean_output(!empty($profile['pro_logo']) ? $profile['pro_logo'] : 'assets/img/logo/antara-logo-white.svg') ?>" alt="Antara Globale Logo">
                             </a>
-                            <a href="index.php" class="header-logo-2">
+                            <a href="/" class="header-logo-2">
                                 <img src="<?= clean_output(!empty($profile['pro_dark_logo']) ? $profile['pro_dark_logo'] : 'assets/img/logo/antara-logo-dark.svg') ?>" alt="Antara Globale Logo">
                             </a>
                         </div>
@@ -185,7 +185,7 @@ $export_nav_products = get_products_by_division('export');
                             <nav id="mobile-menu">
                                 <ul>
                                     <li class="<?= ($active_nav == 'home') ? 'active' : '' ?>">
-                                        <a href="index.php">Home</a>
+                                        <a href="/">Home</a>
                                     </li>
                                     <li class="<?= ($active_nav == 'about') ? 'active' : '' ?>">
                                         <a href="about">About Us</a>

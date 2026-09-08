@@ -42,7 +42,7 @@ require_once __DIR__ . '/inc/header.php';
                 </h1>
             </div>
             <ul class="breadcrumb-items wow fadeInUp d-flex flex-wrap justify-content-center align-items-center gap-1 gap-sm-2 list-unstyled mt-3" data-wow-delay=".5s" style="color: #E0E7E1;">
-                <li><a href="index.php" class="text-white"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="/" class="text-white"><i class="fa-solid fa-house"></i> Home</a></li>
                 <li>/</li>
                 <li class="text-warning">Insights</li>
             </ul>
@@ -113,7 +113,7 @@ require_once __DIR__ . '/inc/header.php';
                 <i class="fa-solid fa-newspaper text-muted display-4 mb-3 d-block"></i>
                 <h4 class="text-dark">No Articles Found</h4>
                 <p class="text-muted">Check back soon for new trade insights, harvest reports, and market updates.</p>
-                <a href="index.php" class="btn btn-warning fw-bold px-4">Back to Home</a>
+                <a href="/" class="btn btn-warning fw-bold px-4">Back to Home</a>
             </div>
         <?php endif; ?>
 

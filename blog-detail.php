@@ -53,9 +53,9 @@ require_once __DIR__ . '/inc/header.php';
                 </h1>
             </div>
             <ul class="breadcrumb-items wow fadeInUp d-flex justify-content-center gap-2 list-unstyled mt-3" data-wow-delay=".5s" style="color: #E0E7E1;">
-                <li><a href="index.php" class="text-white"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="/" class="text-white"><i class="fa-solid fa-house"></i> Home</a></li>
                 <li>/</li>
-                <li><a href="blog.php" class="text-white">Insights</a></li>
+                <li><a href="blog" class="text-white">Insights</a></li>
                 <li>/</li>
                 <li class="text-warning">Article</li>
             </ul>

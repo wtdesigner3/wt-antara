@@ -5,6 +5,12 @@
 
 $uri = urldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 
+// Canonical Homepage Redirect
+if ($uri === '/index.php' || $uri === '/index') {
+    header("Location: /", true, 301);
+    exit;
+}
+
 // Serve static assets and existing physical files directly
 if ($uri !== '/' && file_exists(__DIR__ . $uri)) {
     return false;

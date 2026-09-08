@@ -68,7 +68,7 @@ if (count($related_products) < 6) {
                             </h1>
                         </div>
                         <ul class="breadcrumb-items wow fadeInUp d-flex flex-wrap justify-content-center align-items-center gap-1 gap-sm-2" data-wow-delay=".5s">
-                            <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
+                            <li><a href="/"><i class="fa-solid fa-house"></i> Home</a></li>
                             <li>/</li>
                             <li>
                                 <span class="text-white-50">
