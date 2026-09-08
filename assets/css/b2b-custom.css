@@ -1161,28 +1161,6 @@ h6 {
   box-shadow: 0 6px 18px rgba(27, 77, 62, 0.2);
 }
 
-.testimonial-slider-pagination {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  width: auto !important;
-}
-
-.testimonial-slider-pagination .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
-  background: rgba(27, 77, 62, 0.25);
-  opacity: 1;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-.testimonial-slider-pagination .swiper-pagination-bullet-active {
-  width: 24px;
-  background: var(--theme);
-  box-shadow: 0 0 8px rgba(27, 77, 62, 0.3);
-}
-
 /* ==========================================================================
    Modern Open FAQ Section (Mint-Tinted Accordion Bars & Full-Fill Visual)
    ========================================================================== */
@@ -3777,6 +3755,13 @@ textarea.compact-input,
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
   }
   70% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
 /* ==========================================================================
    B2B Testimonials Carousel & Card Styles
    ========================================================================== */
@@ -3786,28 +3771,53 @@ textarea.compact-input,
 }
 
 .testimonial-swiper-container {
-  padding: 8px 4px 20px;
   position: relative;
+  width: 100%;
 }
 
 .testimonial-swiper-active {
-  padding: 10px 4px 26px !important;
-  margin: -10px -4px -26px !important;
+  padding: 12px 4px 18px !important;
   overflow: hidden;
 }
 
+.testimonial-swiper-active .swiper-wrapper {
+  align-items: stretch !important;
+}
+
+.testimonial-swiper-active .swiper-slide {
+  height: auto !important;
+  display: flex !important;
+}
+
 .testimonial-card-b2b {
+  height: 100% !important;
+  width: 100% !important;
   background: #FFFFFF;
   border-radius: 20px !important;
   border: 1px solid rgba(18, 48, 35, 0.08) !important;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
 }
 
 .testimonial-card-b2b:hover {
   transform: translateY(-6px);
   box-shadow: 0 18px 36px rgba(18, 48, 35, 0.12) !important;
   border-color: rgba(197, 160, 89, 0.4) !important;
+}
+
+/* Centered Controls Bar (Arrows + Pagination Dots) */
+.testimonial-controls-bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 14px !important;
+  margin: 20px auto 0 !important;
+  position: relative !important;
+  z-index: 5 !important;
+  width: 100% !important;
 }
 
 .testimonial-slider-prev,
@@ -3824,6 +3834,7 @@ textarea.compact-input,
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  flex-shrink: 0;
 }
 
 .testimonial-slider-prev:hover,
@@ -3835,19 +3846,32 @@ textarea.compact-input,
   box-shadow: 0 8px 20px rgba(18,48,35,0.25);
 }
 
+.testimonial-slider-pagination {
+  position: static !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 4px !important;
+}
+
 .testimonial-slider-pagination .swiper-pagination-bullet {
   width: 9px;
   height: 9px;
   background: #C4C4C4;
   opacity: 1;
   margin: 0 4px;
+  border-radius: 50%;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .testimonial-slider-pagination .swiper-pagination-bullet-active {
   background: var(--theme);
   width: 24px;
-  border-radius: 4px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(27, 77, 62, 0.3);
 }
 
 /* ==========================================================================

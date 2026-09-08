@@ -663,26 +663,14 @@ if ($has_choose_content):
 <?php if (!empty($testimonials)): ?>
 <section class="section-padding fix section-bg-3 b2b-testimonial-section" style="background-color: var(--bg3);" data-aos="fade-up">
     <div class="container">
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 mb-md-5">
-            <div>
-                <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 13.5px;">
-                    Client Endorsements
-                </span>
-                <h2 class="section-title mb-2">Trusted by Global Importers &amp; Domestic Cafés</h2>
-                <p class="text-muted mb-0" style="max-width: 620px; font-size: 15px;">
-                    Authentic feedback from international commodity roasters, blenders, and hospitality procurement heads.
-                </p>
-            </div>
-            
-            <!-- Slider Navigation Arrows -->
-            <div class="d-flex align-items-center gap-2 mt-3 mt-md-0">
-                <div class="testimonial-slider-prev product-slider-btn" role="button" aria-label="Previous Slide">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </div>
-                <div class="testimonial-slider-next product-slider-btn" role="button" aria-label="Next Slide">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-            </div>
+        <div class="text-center mb-4 mb-md-5">
+            <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 13.5px;">
+                Client Endorsements
+            </span>
+            <h2 class="section-title mb-2">Trusted by Global Importers &amp; Domestic Cafés</h2>
+            <p class="text-muted mx-auto mb-0" style="max-width: 680px; font-size: 15.5px;">
+                Authentic feedback from international commodity roasters, blenders, and hospitality procurement heads.
+            </p>
         </div>
 
         <!-- Testimonial Swiper Container -->
@@ -691,7 +679,7 @@ if ($has_choose_content):
                 <div class="swiper-wrapper">
                     <?php foreach ($testimonials as $t): ?>
                         <div class="swiper-slide h-auto">
-                            <div class="testimonial-card-b2b p-4 bg-white rounded-4 border shadow-sm h-100 d-flex flex-column justify-content-between">
+                            <div class="testimonial-card-b2b p-4 bg-white rounded-4 border shadow-sm w-100 d-flex flex-column justify-content-between">
                                 <div>
                                     <div class="d-flex align-items-center justify-content-between mb-3">
                                         <div class="d-flex text-warning">
@@ -723,7 +711,17 @@ if ($has_choose_content):
                         </div>
                     <?php endforeach; ?>
                 </div>
-                <div class="testimonial-slider-pagination text-center mt-4"></div>
+            </div>
+
+            <!-- Centered Bottom Navigation & Pagination Bar -->
+            <div class="testimonial-controls-bar d-flex align-items-center justify-content-center gap-3 mt-4 pt-2">
+                <div class="testimonial-slider-prev" role="button" aria-label="Previous Slide">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="testimonial-slider-pagination"></div>
+                <div class="testimonial-slider-next" role="button" aria-label="Next Slide">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
             </div>
         </div>
     </div>
@@ -752,13 +750,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     clickable: true,
                 },
                 breakpoints: {
-                    640: {
-                        slidesPerView: 1.2,
-                        spaceBetween: 18
+                    576: {
+                        slidesPerView: 1,
+                        spaceBetween: 20
                     },
                     768: {
                         slidesPerView: 2,
-                        spaceBetween: 22
+                        spaceBetween: 24
                     },
                     1024: {
                         slidesPerView: 3,
