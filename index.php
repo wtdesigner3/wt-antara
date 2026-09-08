@@ -4,8 +4,9 @@ require_once 'inc/db.php';
 $page_title = "Antara Globale | Premium Indian Agricultural Commodities Exporter & HORECA Supplier";
 $page_desc = "Antara Globale is an Indian sourcing and trading company supplying premium green coffee beans, estate teas, Malabar spices, and comprehensive restaurant & café foodservice supplies.";
 
-// Fetch Home Page CMS Content
+// Fetch Home Page & Shared CMS Content
 $home = get_home_content();
+$about = get_about_content();
 $hero_slides = get_hero_slides();
 
 // Fetch Export Commodities
@@ -228,83 +229,128 @@ if ($has_home_about_head || $has_home_about_body || $has_home_about_img):
 </section>
 <?php endif; ?>
 
-<!-- 2.7 Industries We Serve Section -->
+<!-- 2.7 Industries We Serve Section Start -->
+<?php 
+$has_ind1 = !empty(trim($about['ind1_title'] ?? '')) || !empty(trim($about['ind1_desc'] ?? ''));
+$has_ind2 = !empty(trim($about['ind2_title'] ?? '')) || !empty(trim($about['ind2_desc'] ?? ''));
+
+if ($has_ind1 || $has_ind2):
+    $ind_col = ($has_ind1 && $has_ind2) ? 'col-lg-6' : 'col-lg-8 mx-auto';
+?>
 <section class="section-padding fix" style="background-color: #FAF7F2;" data-aos="fade-up">
     <div class="container">
-        <div class="text-center mb-4 mb-md-5">
-            <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 13.5px;">
-                Industries We Serve
-            </span>
-            <h2 class="section-title">Procurement Solutions for Two Strategic Sectors</h2>
-            <p class="text-muted mx-auto mb-0" style="max-width: 650px; font-size: 15.5px;">
-                Supplying international bulk trading desks with agricultural commodities, and domestic hospitality chains with essential kitchen ingredients.
-            </p>
-        </div>
+        <?php if (!empty(trim($about['ind_heading'] ?? '')) || !empty(trim($about['ind_desc'] ?? ''))): ?>
+            <div class="text-center mb-4 mb-md-5">
+                <?php if (!empty(trim($about['ind_subheading'] ?? ''))): ?>
+                    <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 13px;">
+                        <?= clean_output($about['ind_subheading']) ?>
+                    </span>
+                <?php endif; ?>
+                <?php if (!empty(trim($about['ind_heading'] ?? ''))): ?>
+                    <h2 class="section-title"><?= clean_output($about['ind_heading']) ?></h2>
+                <?php endif; ?>
+                <?php if (!empty(trim($about['ind_desc'] ?? ''))): ?>
+                    <p class="text-muted mx-auto mb-0" style="max-width: 680px; font-size: 15.5px;">
+                        <?= clean_output($about['ind_desc']) ?>
+                    </p>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
 
-        <div class="row g-4">
+        <div class="row g-4 justify-content-center">
             <!-- Industry 1: Export -->
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="b2b-industry-card">
-                    <div class="b2b-industry-header">
-                        <div class="b2b-industry-icon">
-                            <img src="assets/img/icons/industry-export.svg" alt="International Trade Division">
+            <?php if ($has_ind1): ?>
+                <div class="<?= $ind_col ?>" data-aos="fade-up" data-aos-delay="100">
+                    <div class="b2b-industry-card">
+                        <div class="b2b-industry-header">
+                            <?php if (!empty(trim($about['ind1_icon'] ?? ''))): ?>
+                                <div class="b2b-industry-icon">
+                                    <img src="<?= clean_output($about['ind1_icon']) ?>" alt="<?= clean_output($about['ind1_title'] ?? 'Export Sector') ?>">
+                                </div>
+                            <?php endif; ?>
+                            <div>
+                                <?php if (!empty(trim($about['ind1_badge'] ?? ''))): ?>
+                                    <span class="b2b-industry-badge"><?= clean_output($about['ind1_badge']) ?></span>
+                                <?php endif; ?>
+                                <?php if (!empty(trim($about['ind1_title'] ?? ''))): ?>
+                                    <h3><?= clean_output($about['ind1_title']) ?></h3>
+                                <?php endif; ?>
+                            </div>
                         </div>
-                        <div>
-                            <span class="b2b-industry-badge">International Trade Division</span>
-                            <h3>Export Sector</h3>
-                        </div>
-                    </div>
-                    <p class="text-muted mb-4" style="font-size: 15px; line-height: 1.7;">
-                        Supplying international commodity buyers with origin-graded coffee, estate teas, and culinary spices backed by phytosanitary compliance and seaport dispatch.
-                    </p>
-                    <h6 class="fw-bold mb-3" style="color: var(--header); font-size: 13.5px; text-transform: uppercase; letter-spacing: 0.5px;">Who We Supply:</h6>
-                    <div class="industry-client-list">
-                        <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Importers</span>
-                        <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Distributors</span>
-                        <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Wholesalers</span>
-                        <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Retail Brands</span>
-                        <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Food Manufacturers</span>
-                    </div>                    <div class="mt-auto pt-3">
-                        <a href="export/product-arabica" class="theme-btn btn-sm">
-                            Explore Export Commodities <i class="fa-solid fa-arrow-right ms-1"></i>
-                        </a>
+                        <?php if (!empty(trim($about['ind1_desc'] ?? ''))): ?>
+                            <p class="text-muted mb-4" style="font-size: 15px; line-height: 1.7;">
+                                <?= clean_output($about['ind1_desc']) ?>
+                            </p>
+                        <?php endif; ?>
+                        <?php if (!empty(trim($about['ind1_clients'] ?? ''))): ?>
+                            <h6 class="fw-bold mb-3" style="color: var(--header); font-size: 13.5px; text-transform: uppercase; letter-spacing: 0.5px;">Who We Supply:</h6>
+                            <div class="industry-client-list">
+                                <?php 
+                                $sec1_clients = array_filter(array_map('trim', explode(',', $about['ind1_clients'])));
+                                foreach ($sec1_clients as $chip): ?>
+                                    <span class="industry-client-chip"><i class="fa-solid fa-check"></i> <?= clean_output($chip) ?></span>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if (!empty(trim($about['ind1_btn_text'] ?? ''))): ?>
+                            <div class="mt-auto pt-3">
+                                <a href="<?= clean_output(!empty($about['ind1_btn_link']) ? $about['ind1_btn_link'] : 'export/product-arabica') ?>" class="theme-btn btn-sm">
+                                    <?= clean_output($about['ind1_btn_text']) ?> <i class="fa-solid fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
-            </div>
+            <?php endif; ?>
 
-            <!-- Card 2: Restaurant & Café Supply (HORECA) -->
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="industry-serve-card h-100 p-4 p-md-5 d-flex flex-column justify-content-between" style="background: #FFFFFF; border-radius: 20px; border: 1.5px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
-                    <div class="d-flex align-items-center gap-3 mb-4">
-                        <div class="industry-card-icon-wrap" style="width: 56px; height: 56px; background: rgba(197, 160, 89, 0.12); border-radius: 14px; display: flex; align-items: center; justify-content: center;">
-                            <i class="fa-solid fa-utensils text-warning fs-3"></i>
+            <!-- Industry 2: HORECA -->
+            <?php if ($has_ind2): ?>
+                <div class="<?= $ind_col ?>" data-aos="fade-up" data-aos-delay="200">
+                    <div class="b2b-industry-card">
+                        <div class="b2b-industry-header">
+                            <?php if (!empty(trim($about['ind2_icon'] ?? ''))): ?>
+                                <div class="b2b-industry-icon">
+                                    <img src="<?= clean_output($about['ind2_icon']) ?>" alt="<?= clean_output($about['ind2_title'] ?? 'HORECA Sector') ?>">
+                                </div>
+                            <?php endif; ?>
+                            <div>
+                                <?php if (!empty(trim($about['ind2_badge'] ?? ''))): ?>
+                                    <span class="b2b-industry-badge"><?= clean_output($about['ind2_badge']) ?></span>
+                                <?php endif; ?>
+                                <?php if (!empty(trim($about['ind2_title'] ?? ''))): ?>
+                                    <h3><?= clean_output($about['ind2_title']) ?></h3>
+                                <?php endif; ?>
+                            </div>
                         </div>
-                        <div>
-                            <span class="badge mb-1 px-3 py-1 fw-bold text-uppercase" style="background: rgba(197, 160, 89, 0.15); color: #8A6D2B; font-size: 11px; letter-spacing: 0.5px;">B2B Foodservice</span>
-                            <h3 class="mb-0 fw-bold" style="color: var(--header); font-size: 24px;">Restaurant &amp; Café Supply</h3>
-                        </div>
-                    </div>
-                    <p class="text-muted mb-4" style="line-height: 1.7; font-size: 15px;">
-                        Reliable single-source foodservice partner for commercial kitchens, café franchises, boutique roasteries, and hospitality chains. We distribute barista espresso beans, pure green coffee for master roasters, ceremonial matcha, kitchen-grade sauces &amp; condiments (Veeba), artisanal beverage syrups, and commercial portion sugar sachets.
-                    </p>
-                    <h6 class="fw-bold mb-3" style="color: var(--header); font-size: 13.5px; text-transform: uppercase; letter-spacing: 0.5px;">Who We Supply:</h6>
-                    <div class="industry-client-list">
-                        <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Café Chains &amp; Franchises</span>
-                        <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Specialty Roasters</span>
-                        <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Fine Dining &amp; QSRs</span>
-                        <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Cloud Kitchens</span>
-                        <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Hotel &amp; Resort Groups</span>
-                    </div>
-                    <div class="mt-auto pt-3">
-                        <a href="restaurant/supply-coffee" class="theme-btn btn-sm">
-                            Explore Restaurant &amp; Café Supplies <i class="fa-solid fa-arrow-right ms-1"></i>
-                        </a>
+                        <?php if (!empty(trim($about['ind2_desc'] ?? ''))): ?>
+                            <p class="text-muted mb-4" style="font-size: 15px; line-height: 1.7;">
+                                <?= clean_output($about['ind2_desc']) ?>
+                            </p>
+                        <?php endif; ?>
+                        <?php if (!empty(trim($about['ind2_clients'] ?? ''))): ?>
+                            <h6 class="fw-bold mb-3" style="color: var(--header); font-size: 13.5px; text-transform: uppercase; letter-spacing: 0.5px;">Who We Supply:</h6>
+                            <div class="industry-client-list">
+                                <?php 
+                                $sec2_clients = array_filter(array_map('trim', explode(',', $about['ind2_clients'])));
+                                foreach ($sec2_clients as $chip): ?>
+                                    <span class="industry-client-chip"><i class="fa-solid fa-check"></i> <?= clean_output($chip) ?></span>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if (!empty(trim($about['ind2_btn_text'] ?? ''))): ?>
+                            <div class="mt-auto pt-3">
+                                <a href="<?= clean_output(!empty($about['ind2_btn_link']) ? $about['ind2_btn_link'] : 'restaurant/supply-coffee') ?>" class="theme-btn gold-btn btn-sm">
+                                    <?= clean_output($about['ind2_btn_text']) ?> <i class="fa-solid fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
-            </div>
+            <?php endif; ?>
         </div>
     </div>
 </section>
+<?php endif; ?>
 
 <!-- 3. Export Agricultural Commodities Slider (Live Dynamic from MySQL) -->
 <section class="section-padding bg-cover" style="background-color: #F8FAF9;" data-aos="fade-up">
