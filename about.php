@@ -14,9 +14,9 @@ require_once 'inc/header.php';
     <div class="container">
         <div class="page-heading text-center">
             <div class="breadcrumb-sub-title">
-                <h1 class="text-white wow fadeInUp" data-wow-delay=".3s" style="font-size: 46px;">About Antara Globale</h1>
+                <h1 class="page-banner-title text-white wow fadeInUp" data-wow-delay=".3s">About Antara Globale</h1>
             </div>
-            <ul class="breadcrumb-items wow fadeInUp d-flex justify-content-center gap-2 list-unstyled mt-3" data-wow-delay=".5s" style="color: #E0E7E1;">
+            <ul class="breadcrumb-items wow fadeInUp d-flex flex-wrap justify-content-center align-items-center gap-1 gap-sm-2 list-unstyled mt-3" data-wow-delay=".5s" style="color: #E0E7E1;">
                 <li><a href="index.php" class="text-white"><i class="fa-solid fa-house"></i> Home</a></li>
                 <li>/</li>
                 <li class="text-warning">About Us</li>
@@ -36,27 +36,27 @@ if ($has_story_head || $has_story_body || $has_story_img):
 ?>
 <section class="section-padding fix">
     <div class="container">
-        <div class="row align-items-center g-5">
+        <div class="row align-items-center g-4 g-lg-5">
             <?php if ($has_story_img): ?>
                 <div class="col-lg-6 wow img-custom-anim-left">
                     <div style="border-radius: 20px; overflow: hidden; box-shadow: var(--box-shadow); border: 1px solid var(--border); position: relative;">
-                        <img src="<?= clean_output($about['story_image']) ?>" alt="Indian Agricultural Sourcing Landscape" style="width: 100%; height: 520px; object-fit: cover; display: block;">
+                        <img src="<?= clean_output($about['story_image']) ?>" alt="Indian Agricultural Sourcing Landscape" class="about-feature-img" style="width: 100%; object-fit: cover; display: block;">
                         <?php 
                         $has_badge_t = !empty(trim($about['story_badge_title'] ?? ''));
                         $has_badge_s = !empty(trim($about['story_badge_subtitle'] ?? ''));
                         if ($has_badge_t || $has_badge_s):
                         ?>
-                            <div style="position: absolute; bottom: 20px; left: 20px; right: 20px; background: rgba(18, 43, 34, 0.92); backdrop-filter: blur(8px); border-radius: 12px; padding: 16px 20px; color: #FFFFFF; border: 1px solid rgba(197, 160, 89, 0.4);">
+                            <div class="about-story-badge" style="position: absolute; bottom: 20px; left: 20px; right: 20px; background: rgba(18, 43, 34, 0.92); backdrop-filter: blur(8px); border-radius: 12px; padding: 14px 18px; color: #FFFFFF; border: 1px solid rgba(197, 160, 89, 0.4);">
                                 <div class="d-flex align-items-center gap-3">
                                     <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(197, 160, 89, 0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                                         <img src="assets/img/icons/partnership-trust.svg" alt="Dependable Sourcing Partner" style="width: 28px; height: 28px; object-fit: contain;">
                                     </div>
                                     <div>
                                         <?php if ($has_badge_t): ?>
-                                            <h6 class="mb-0 text-white fw-bold"><?= clean_output($about['story_badge_title']) ?></h6>
+                                            <h6 class="mb-0 text-white fw-bold" style="font-size: 15px;"><?= clean_output($about['story_badge_title']) ?></h6>
                                         <?php endif; ?>
                                         <?php if ($has_badge_s): ?>
-                                            <small style="color: #D1DFD4;"><?= clean_output($about['story_badge_subtitle']) ?></small>
+                                            <small style="color: #D1DFD4; font-size: 13px;"><?= clean_output($about['story_badge_subtitle']) ?></small>
                                         <?php endif; ?>
                                     </div>
                                 </div>
@@ -67,19 +67,19 @@ if ($has_story_head || $has_story_body || $has_story_img):
             <?php endif; ?>
             <div class="<?= $story_text_col ?>">
                 <?php if (!empty(trim($about['story_subheading'] ?? ''))): ?>
-                    <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 14px;">
+                    <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 13px;">
                         <?= clean_output($about['story_subheading']) ?>
                     </span>
                 <?php endif; ?>
                 <?php if ($has_story_head): ?>
-                    <h2 class="mb-4" style="font-size: 38px; line-height: 1.25;">
+                    <h2 class="section-title mb-3">
                         <?= clean_output($about['story_heading']) ?>
                     </h2>
                 <?php endif; ?>
                 
                 <!-- CKEditor Rich Story Narrative -->
                 <?php if ($has_story_body): ?>
-                    <div class="about-rich-narrative mb-4" style="font-size: 16px; line-height: 1.8; color: #3E4B3F;">
+                    <div class="about-rich-narrative mb-4" style="font-size: 15.5px; line-height: 1.8; color: #3E4B3F;">
                         <?= $about['story_content'] ?>
                     </div>
                 <?php endif; ?>
@@ -108,12 +108,12 @@ if ($has_mission || $has_vision):
 ?>
 <section class="section-padding fix section-bg-3" style="background-color: var(--bg3);">
     <div class="container">
-        <div class="text-center mb-5">
-            <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 14px;">
+        <div class="text-center mb-4 mb-md-5">
+            <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 13px;">
                 Our Strategic Direction
             </span>
-            <h2 style="font-size: 38px;">Built on Trust, Reliability &amp; Execution</h2>
-            <p class="text-muted mx-auto mb-0" style="max-width: 650px; font-size: 16px;">
+            <h2 class="section-title">Built on Trust, Reliability &amp; Execution</h2>
+            <p class="text-muted mx-auto mb-0" style="max-width: 650px; font-size: 15.5px;">
                 Guiding every sourcing contract, quality evaluation, and client interaction with clear principles.
             </p>
         </div>
@@ -128,13 +128,13 @@ if ($has_mission || $has_vision):
                 <div class="<?= $vm_col ?>" data-aos="fade-up" data-aos-delay="100">
                     <div class="b2b-vm-card h-100">
                         <div class="b2b-vm-icon">
-                            <img src="<?= clean_output($mission_img) ?>" alt="<?= clean_output($about['mission_heading'] ?? 'Our Strategic Mission') ?>">
+                            <img src="<?= clean_output($mission_img) ?>" alt="Antara Globale Strategic Mission">
                         </div>
                         <?php if (!empty(trim($about['mission_heading'] ?? ''))): ?>
-                            <h4><?= clean_output($about['mission_heading']) ?></h4>
+                            <h3><?= clean_output($about['mission_heading']) ?></h3>
                         <?php endif; ?>
-                        <?php if (!empty(trim(strip_tags($about['mission_content'] ?? '')))): ?>
-                            <div class="text-muted" style="font-size: 15px; line-height: 1.75;">
+                        <?php if (!empty(trim($about['mission_content'] ?? ''))): ?>
+                            <div class="b2b-vm-body">
                                 <?= $about['mission_content'] ?>
                             </div>
                         <?php endif; ?>
@@ -147,13 +147,13 @@ if ($has_mission || $has_vision):
                 <div class="<?= $vm_col ?>" data-aos="fade-up" data-aos-delay="200">
                     <div class="b2b-vm-card h-100">
                         <div class="b2b-vm-icon">
-                            <img src="<?= clean_output($vision_img) ?>" alt="<?= clean_output($about['vision_heading'] ?? 'Our Global Vision') ?>">
+                            <img src="<?= clean_output($vision_img) ?>" alt="Antara Globale Long Term Vision">
                         </div>
                         <?php if (!empty(trim($about['vision_heading'] ?? ''))): ?>
-                            <h4><?= clean_output($about['vision_heading']) ?></h4>
+                            <h3><?= clean_output($about['vision_heading']) ?></h3>
                         <?php endif; ?>
-                        <?php if (!empty(trim(strip_tags($about['vision_content'] ?? '')))): ?>
-                            <div class="text-muted" style="font-size: 15px; line-height: 1.75;">
+                        <?php if (!empty(trim($about['vision_content'] ?? ''))): ?>
+                            <div class="b2b-vm-body">
                                 <?= $about['vision_content'] ?>
                             </div>
                         <?php endif; ?>
@@ -176,17 +176,17 @@ if ($has_ind1 || $has_ind2):
 <section class="section-padding fix bg-white">
     <div class="container">
         <?php if (!empty(trim($about['ind_heading'] ?? '')) || !empty(trim($about['ind_desc'] ?? ''))): ?>
-            <div class="text-center mb-5">
+            <div class="text-center mb-4 mb-md-5">
                 <?php if (!empty(trim($about['ind_subheading'] ?? ''))): ?>
-                    <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 14px;">
+                    <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 13px;">
                         <?= clean_output($about['ind_subheading']) ?>
                     </span>
                 <?php endif; ?>
                 <?php if (!empty(trim($about['ind_heading'] ?? ''))): ?>
-                    <h2 style="font-size: 38px;"><?= clean_output($about['ind_heading']) ?></h2>
+                    <h2 class="section-title"><?= clean_output($about['ind_heading']) ?></h2>
                 <?php endif; ?>
                 <?php if (!empty(trim($about['ind_desc'] ?? ''))): ?>
-                    <p class="text-muted mx-auto mb-0" style="max-width: 680px; font-size: 16px;">
+                    <p class="text-muted mx-auto mb-0" style="max-width: 680px; font-size: 15.5px;">
                         <?= clean_output($about['ind_desc']) ?>
                     </p>
                 <?php endif; ?>
@@ -219,7 +219,7 @@ if ($has_ind1 || $has_ind2):
                             </p>
                         <?php endif; ?>
                         <?php if (!empty(trim($about['ind1_clients'] ?? ''))): ?>
-                            <h6 class="fw-bold mb-3" style="color: var(--header); font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Who We Supply:</h6>
+                            <h6 class="fw-bold mb-3" style="color: var(--header); font-size: 13.5px; text-transform: uppercase; letter-spacing: 0.5px;">Who We Supply:</h6>
                             <div class="industry-client-list">
                                 <?php 
                                 $sec1_clients = array_filter(array_map('trim', explode(',', $about['ind1_clients'])));
@@ -264,7 +264,7 @@ if ($has_ind1 || $has_ind2):
                             </p>
                         <?php endif; ?>
                         <?php if (!empty(trim($about['ind2_clients'] ?? ''))): ?>
-                            <h6 class="fw-bold mb-3" style="color: var(--header); font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Who We Supply:</h6>
+                            <h6 class="fw-bold mb-3" style="color: var(--header); font-size: 13.5px; text-transform: uppercase; letter-spacing: 0.5px;">Who We Supply:</h6>
                             <div class="industry-client-list">
                                 <?php 
                                 $sec2_clients = array_filter(array_map('trim', explode(',', $about['ind2_clients'])));
@@ -301,22 +301,22 @@ if ($has_cap_head || $has_cap_body || $has_cap_img || $has_cap_btn1):
 ?>
 <section class="section-padding fix section-bg-3" style="background-color: var(--bg3);">
     <div class="container">
-        <div class="row align-items-center g-5">
+        <div class="row align-items-center g-4 g-lg-5">
             <div class="<?= $cap_text_col ?>">
                 <?php if (!empty(trim($about['capabilities_subheading'] ?? ''))): ?>
-                    <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 14px;">
+                    <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 13px;">
                         <?= clean_output($about['capabilities_subheading']) ?>
                     </span>
                 <?php endif; ?>
                 <?php if ($has_cap_head): ?>
-                    <h2 class="mb-3" style="font-size: 36px;">
+                    <h2 class="section-title mb-3">
                         <?= clean_output($about['capabilities_heading']) ?>
                     </h2>
                 <?php endif; ?>
 
                 <!-- CKEditor Rich Narrative & Feature Points -->
                 <?php if ($has_cap_body): ?>
-                    <div class="capabilities-rich-content mb-4" style="font-size: 16px; line-height: 1.75; color: #3E4B3F;">
+                    <div class="capabilities-rich-content mb-4" style="font-size: 15.5px; line-height: 1.75; color: #3E4B3F;">
                         <?= $about['capabilities_content'] ?>
                     </div>
                 <?php endif; ?>
@@ -339,7 +339,7 @@ if ($has_cap_head || $has_cap_body || $has_cap_img || $has_cap_btn1):
             <?php if ($has_cap_img): ?>
                 <div class="col-lg-6">
                     <div style="border-radius: 20px; overflow: hidden; box-shadow: var(--box-shadow); border: 1px solid var(--border);">
-                        <img src="<?= clean_output($about['capabilities_image']) ?>" alt="<?= clean_output($about['capabilities_heading'] ?? 'Antara Globale Supply Capabilities') ?>" style="width: 100%; height: 460px; object-fit: cover; display: block;">
+                        <img src="<?= clean_output($about['capabilities_image']) ?>" alt="<?= clean_output($about['capabilities_heading'] ?? 'Antara Globale Supply Capabilities') ?>" class="about-feature-img" style="width: 100%; object-fit: cover; display: block;">
                     </div>
                 </div>
             <?php endif; ?>
@@ -368,17 +368,17 @@ if (!empty($stats_items)):
 ?>
 <section class="section-padding fix bg-white">
     <div class="container">
-        <div class="text-center mb-5">
-            <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 14px;">Verified Metrics</span>
-            <h2 style="font-size: 36px;">Antara Globale in Numbers</h2>
+        <div class="text-center mb-4 mb-md-5">
+            <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 13px;">Verified Metrics</span>
+            <h2 class="section-title">Antara Globale in Numbers</h2>
         </div>
-        <div class="row g-4 text-center justify-content-center">
+        <div class="row g-3 g-md-4 text-center justify-content-center">
             <?php foreach ($stats_items as $st): ?>
                 <div class="<?= $stat_col ?>">
-                    <div class="p-4 rounded-3 border bg-light h-100">
-                        <h3 class="fw-bold mb-1" style="font-size: 38px; color: var(--header);"><?= clean_output($st['val']) ?></h3>
+                    <div class="p-3 p-sm-4 rounded-3 border bg-light h-100 d-flex flex-column justify-content-center">
+                        <h3 class="stat-number fw-bold mb-1" style="color: var(--header);"><?= clean_output($st['val']) ?></h3>
                         <?php if (!empty(trim($st['label']))): ?>
-                            <span class="text-muted" style="font-size: 14px;"><?= clean_output($st['label']) ?></span>
+                            <span class="text-muted" style="font-size: 13.5px;"><?= clean_output($st['label']) ?></span>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -397,20 +397,20 @@ if ($has_cta_heading || $has_cta_desc || $has_cta_btn):
     $cta_bg = !empty($about['cta_bg_image']) && file_exists($about['cta_bg_image']) ? $about['cta_bg_image'] : 'assets/img/commodities/shipping-logistics-port.jpg';
     $cta_action = $about['cta_btn_action'] ?? 'link';
 ?>
-<section class="container my-5 py-4">
-    <div class="b2b-cta-section text-center p-5" style="background: linear-gradient(135deg, rgba(18, 43, 34, 0.92) 0%, rgba(22, 58, 44, 0.86) 50%, rgba(45, 30, 23, 0.92) 100%), url('<?= clean_output($cta_bg) ?>') center/cover no-repeat;">
+<section class="container my-4 my-md-5 py-2 py-md-4">
+    <div class="b2b-cta-section text-center p-4 p-md-5" style="background: linear-gradient(135deg, rgba(18, 43, 34, 0.92) 0%, rgba(22, 58, 44, 0.86) 50%, rgba(45, 30, 23, 0.92) 100%), url('<?= clean_output($cta_bg) ?>') center/cover no-repeat;">
         <?php if (!empty(trim($about['cta_subheading'] ?? ''))): ?>
             <span class="badge bg-warning text-dark px-3 py-1.5 text-uppercase fw-bold mb-3 d-inline-block" style="letter-spacing: 1px; font-size: 12px;">
                 <?= clean_output($about['cta_subheading']) ?>
             </span>
         <?php endif; ?>
         <?php if ($has_cta_heading): ?>
-            <h2 class="text-white mb-3" style="font-size: 38px;">
+            <h2 class="section-title text-white mb-3">
                 <?= clean_output($about['cta_heading']) ?>
             </h2>
         <?php endif; ?>
         <?php if ($has_cta_desc): ?>
-            <p class="text-white-50 mb-4" style="max-width: 680px; margin: 0 auto 24px; font-size: 16px;">
+            <p class="text-white-50 mb-4" style="max-width: 680px; margin: 0 auto 24px; font-size: 15.5px;">
                 <?= clean_output($about['cta_desc']) ?>
             </p>
         <?php endif; ?>

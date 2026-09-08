@@ -63,11 +63,11 @@ if (count($related_products) < 6) {
                 <div class="container">
                     <div class="page-heading text-center">
                         <div class="breadcrumb-sub-title">
-                            <h1 class="text-white wow fadeInUp" data-wow-delay=".3s" style="font-size: 46px;">
+                            <h1 class="page-banner-title text-white wow fadeInUp" data-wow-delay=".3s">
                                 <?= clean_output($product['name']) ?>
                             </h1>
                         </div>
-                        <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                        <ul class="breadcrumb-items wow fadeInUp d-flex flex-wrap justify-content-center align-items-center gap-1 gap-sm-2" data-wow-delay=".5s">
                             <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
                             <li>/</li>
                             <li>
@@ -325,7 +325,7 @@ if (count($related_products) < 6) {
                                 <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 14px;">
                                     <?= ($product['division'] == 'export') ? 'Complementary Export Portfolio' : 'Related Restaurant &amp; Café Supplies' ?>
                                 </span>
-                                <h2 style="font-size: 36px; font-weight: 700; color: #123023;" class="mb-1">
+                                <h2 class="section-title mb-1">
                                     Related Products &amp; Sourcing Categories
                                 </h2>
                                 <p class="text-muted mb-0" style="max-width: 650px; font-size: 15.5px;">

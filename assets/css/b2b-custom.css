@@ -3777,35 +3777,298 @@ textarea.compact-input,
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
   }
   70% {
-    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+/* ==========================================================================
+   B2B Testimonials Carousel & Card Styles
+   ========================================================================== */
+.b2b-testimonial-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-swiper-container {
+  padding: 8px 4px 20px;
+  position: relative;
+}
+
+.testimonial-swiper-active {
+  padding: 10px 4px 26px !important;
+  margin: -10px -4px -26px !important;
+  overflow: hidden;
+}
+
+.testimonial-card-b2b {
+  background: #FFFFFF;
+  border-radius: 20px !important;
+  border: 1px solid rgba(18, 48, 35, 0.08) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+.testimonial-card-b2b:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(18, 48, 35, 0.12) !important;
+  border-color: rgba(197, 160, 89, 0.4) !important;
+}
+
+.testimonial-slider-prev,
+.testimonial-slider-next {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: #FFFFFF;
+  color: #123023;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.testimonial-slider-prev:hover,
+.testimonial-slider-next:hover {
+  background: var(--theme);
+  color: #FFFFFF;
+  border-color: var(--theme);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(18,48,35,0.25);
+}
+
+.testimonial-slider-pagination .swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  background: #C4C4C4;
+  opacity: 1;
+  margin: 0 4px;
+  transition: all 0.3s ease;
+}
+
+.testimonial-slider-pagination .swiper-pagination-bullet-active {
+  background: var(--theme);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   Universal Responsive Typography & Layout System (Mobile / Tablet / Desktop)
+   ========================================================================== */
+.page-banner-title {
+  font-size: clamp(24px, 5vw, 46px);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 0;
+  word-break: break-word;
+}
+
+.section-title {
+  font-size: clamp(22px, 4vw, 38px);
+  font-weight: 700;
+  line-height: 1.28;
+  color: #123023;
+  word-break: break-word;
+}
+
+.stat-number {
+  font-size: clamp(24px, 5.5vw, 38px);
+  font-weight: 800;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.about-feature-img {
+  height: clamp(260px, 45vw, 520px);
+}
+
+/* ==========================================================================
+   Mobile & Tablet Responsiveness Enhancements
+   ========================================================================== */
+@media (max-width: 991.98px) {
+  .section-padding {
+    padding: 60px 0;
   }
-  100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+
+  .breadcrumb-wrapper {
+    padding: 110px 0 45px !important;
+  }
+
+  .product-detail-left-col {
+    position: static !important;
+    top: auto !important;
+  }
+
+  .product-detail-img img {
+    height: 280px !important;
   }
 }
 
-/* Responsive optimization on Mobile Devices */
 @media (max-width: 767.98px) {
+  .section-padding {
+    padding: 45px 0 !important;
+  }
+
+  /* Page Header / Banner / Breadcrumb */
+  .breadcrumb-wrapper {
+    padding: 95px 0 35px !important;
+    background-position: center !important;
+  }
+
+  .breadcrumb-sub-title h1,
+  .page-heading h1 {
+    font-size: clamp(20px, 6vw, 28px) !important;
+    line-height: 1.25 !important;
+    padding: 0 8px;
+  }
+
+  .breadcrumb-items {
+    font-size: 12px !important;
+    padding: 6px 14px !important;
+    max-width: 95% !important;
+    margin: 12px auto 0 !important;
+    border-radius: 24px !important;
+  }
+
+  .breadcrumb-items li {
+    font-size: 12px !important;
+  }
+
+  /* Section Headings */
+  h2, .section-title, .faq-modern-title {
+    font-size: clamp(20px, 5.5vw, 26px) !important;
+    line-height: 1.3 !important;
+  }
+
+  h3 {
+    font-size: clamp(17px, 4.5vw, 22px) !important;
+  }
+
+  /* Product Card on Mobile */
+  .b2b-product-card {
+    height: 380px !important;
+    border-radius: 22px !important;
+    border-width: 3px !important;
+  }
+
+  .b2b-card-glass-bottom {
+    padding: 14px 16px 16px !important;
+  }
+
+  .b2b-card-glass-title a {
+    font-size: 16.5px !important;
+  }
+
+  .b2b-card-glass-sub {
+    font-size: 12px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .b2b-btn-white-pill {
+    padding: 7px 14px !important;
+    font-size: 12px !important;
+  }
+
+  /* About Feature Images & Badges */
+  .about-feature-img {
+    height: 260px !important;
+  }
+
+  .about-story-badge {
+    left: 10px !important;
+    right: 10px !important;
+    bottom: 10px !important;
+    padding: 10px 12px !important;
+  }
+
+  /* Verified Metrics Numbers Box */
+  .stat-number {
+    font-size: clamp(22px, 7vw, 30px) !important;
+  }
+
+  /* CTA Banners */
+  .b2b-cta-section {
+    padding: 28px 18px !important;
+    border-radius: 20px !important;
+  }
+
+  .b2b-cta-section h2 {
+    font-size: 22px !important;
+  }
+
+  .b2b-cta-section p {
+    font-size: 14px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .b2b-cta-section .theme-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Floating Call & WhatsApp Buttons */
   .fixed-floating-call-widget {
-    bottom: 18px;
-    left: 14px;
+    bottom: 14px !important;
+    left: 10px !important;
   }
+
   .fixed-floating-wa-widget {
-    bottom: 18px;
-    right: 14px;
+    bottom: 14px !important;
+    right: 10px !important;
   }
+
   .floating-btn {
-    width: 46px;
-    height: 46px;
+    width: 44px !important;
+    height: 44px !important;
   }
+
   .floating-btn-icon {
-    font-size: 18px;
+    font-size: 17px !important;
   }
+
   .floating-wa-btn .floating-btn-icon {
-    font-size: 21px;
+    font-size: 20px !important;
   }
+
   .floating-btn-pulse {
-    width: 46px;
-    height: 46px;
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  /* Body & Footer breathing room for floating buttons */
+  footer {
+    padding-bottom: 25px !important;
+  }
+
+  .product-detail-main-section,
+  .news-details-section {
+    padding-bottom: 40px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .breadcrumb-sub-title h1,
+  .page-heading h1 {
+    font-size: 20px !important;
+  }
+
+  .b2b-product-card {
+    height: 350px !important;
+  }
+
+  .floating-btn {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .floating-btn-icon {
+    font-size: 16px !important;
+  }
+
+  .floating-wa-btn .floating-btn-icon {
+    font-size: 18px !important;
+  }
+
+  .floating-btn-pulse {
+    width: 40px !important;
+    height: 40px !important;
   }
 }

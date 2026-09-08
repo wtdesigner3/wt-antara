@@ -197,12 +197,12 @@ if ($has_home_about_head || $has_home_about_body || $has_home_about_img):
             <!-- Right About Content -->
             <div class="<?= $home_story_col ?>" data-aos="fade-left" data-aos-duration="900">
                 <?php if (!empty(trim($home['about_subheading'] ?? ''))): ?>
-                    <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 14px;">
+                    <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 13.5px;">
                         <?= clean_output($home['about_subheading']) ?>
                     </span>
                 <?php endif; ?>
                 <?php if ($has_home_about_head): ?>
-                    <h2 class="mb-3" style="font-size: 38px; line-height: 1.25;">
+                    <h2 class="section-title mb-3">
                         <?= clean_output($home['about_heading']) ?>
                     </h2>
                 <?php endif; ?>
@@ -231,11 +231,11 @@ if ($has_home_about_head || $has_home_about_body || $has_home_about_img):
 <!-- 2.7 Industries We Serve Section -->
 <section class="section-padding fix" style="background-color: #FAF7F2;" data-aos="fade-up">
     <div class="container">
-        <div class="text-center mb-5">
-            <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 14px;">
+        <div class="text-center mb-4 mb-md-5">
+            <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 13.5px;">
                 Industries We Serve
             </span>
-            <h2 style="font-size: 38px;">Procurement Solutions for Two Strategic Sectors</h2>
+            <h2 class="section-title">Procurement Solutions for Two Strategic Sectors</h2>
             <p class="text-muted mx-auto mb-0" style="max-width: 650px; font-size: 15.5px;">
                 Supplying international bulk trading desks with agricultural commodities, and domestic hospitality chains with essential kitchen ingredients.
             </p>
@@ -309,15 +309,15 @@ if ($has_home_about_head || $has_home_about_body || $has_home_about_img):
 <!-- 3. Export Agricultural Commodities Slider (Live Dynamic from MySQL) -->
 <section class="section-padding bg-cover" style="background-color: #F8FAF9;" data-aos="fade-up">
     <div class="container">
-        <div class="d-flex flex-wrap justify-content-between align-items-end mb-5">
+        <div class="d-flex flex-wrap justify-content-between align-items-end mb-4 mb-md-5">
             <div>
-                <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 14px;">
+                <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 13.5px;">
                     International Trade &bull; Origin India
                 </span>
-                <h2 style="font-size: 38px;" class="mb-1">
+                <h2 class="section-title mb-1">
                     Export Agricultural Commodities
                 </h2>
-                <p class="text-muted mb-0" style="max-width: 650px; font-size: 15.5px;">
+                <p class="text-muted mb-0" style="max-width: 650px; font-size: 15px;">
                     Direct-from-origin export commodities loaded at Indian sea ports in multi-ton FCL &amp; LCL container consignments.
                 </p>
             </div>
@@ -417,15 +417,15 @@ document.addEventListener('DOMContentLoaded', function () {
 <!-- 3.5 Restaurant & Café Supplies Grid (All 8 Categories Live from MySQL) -->
 <section class="section-padding fix" style="background-color: #FFFFFF;" data-aos="fade-up">
     <div class="container">
-        <div class="d-flex flex-wrap justify-content-between align-items-end mb-5">
+        <div class="d-flex flex-wrap justify-content-between align-items-end mb-4 mb-md-5">
             <div>
-                <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 14px;">
+                <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 13.5px;">
                     Hospitality &bull; HORECA Division
                 </span>
-                <h2 style="font-size: 38px;" class="mb-1">
+                <h2 class="section-title mb-1">
                     Restaurant &amp; Café Foodservice Supplies
                 </h2>
-                <p class="text-muted mb-0" style="max-width: 650px; font-size: 15.5px;">
+                <p class="text-muted mb-0" style="max-width: 650px; font-size: 15px;">
                     Commercial kitchen staples, barista ingredients, condiments, and customized food sourcing for hospitality chains.
                 </p>
             </div>
@@ -467,15 +467,15 @@ document.addEventListener('DOMContentLoaded', function () {
 <!-- 4. Terroir Sourcing Map / Provenance Section (Live Dynamic from MySQL) -->
 <section class="section-padding bg-cover" style="background-color: #0E251A;" data-aos="fade-up">
     <div class="container">
-        <div class="d-flex flex-wrap justify-content-between align-items-end mb-5">
+        <div class="d-flex flex-wrap justify-content-between align-items-end mb-4 mb-md-5">
             <div>
-                <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 14px;">
+                <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 13.5px;">
                     Geographic Provenance &bull; Farm Origin
                 </span>
-                <h2 class="text-white mb-1" style="font-size: 38px;">
+                <h2 class="section-title text-white mb-1">
                     <?= clean_output($home['terroir_heading'] ?? 'Prime Sourcing Belts Across India') ?>
                 </h2>
-                <p class="text-white-50 mb-0" style="max-width: 650px; font-size: 15.5px;">
+                <p class="text-white-50 mb-0" style="max-width: 650px; font-size: 15px;">
                     <?= clean_output($home['terroir_desc'] ?? 'Explore celebrated agricultural zones producing our export-grade coffee, teas, and spices with authentic geographic provenance.') ?>
                 </p>
             </div>
@@ -585,19 +585,19 @@ if ($has_choose_content):
             <!-- Right: Minimalist & Clean Advantage Grid -->
             <div class="<?= $choose_right_col ?>" data-aos="fade-left" data-aos-duration="850">
                 <?php if (!empty($choose_subheading)): ?>
-                    <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 14px;">
+                    <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 13.5px;">
                         <?= clean_output($choose_subheading) ?>
                     </span>
                 <?php endif; ?>
 
                 <?php if (!empty($choose_heading)): ?>
-                    <h2 class="mb-3" style="font-size: 36px;">
+                    <h2 class="section-title mb-3">
                         <?= clean_output($choose_heading) ?>
                     </h2>
                 <?php endif; ?>
 
                 <?php if (!empty($choose_desc)): ?>
-                    <p class="text-muted mb-4" style="font-size: 15.5px; line-height: 1.65;">
+                    <p class="text-muted mb-4" style="font-size: 15px; line-height: 1.65;">
                         <?= clean_output($choose_desc) ?>
                     </p>
                 <?php endif; ?>
@@ -659,50 +659,117 @@ if ($has_choose_content):
 </section>
 <?php endif; ?>
 
-<!-- 5. Client Testimonials Section (Live from MySQL) -->
+<!-- 5. Client Testimonials Carousel (Live from MySQL) -->
 <?php if (!empty($testimonials)): ?>
-<section class="section-padding fix section-bg-3" style="background-color: var(--bg3);" data-aos="fade-up">
+<section class="section-padding fix section-bg-3 b2b-testimonial-section" style="background-color: var(--bg3);" data-aos="fade-up">
     <div class="container">
-        <div class="text-center mb-5">
-            <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 14px;">
-                Client Endorsements
-            </span>
-            <h2 style="font-size: 38px;">Trusted by Global Importers &amp; Domestic Cafés</h2>
-            <p class="text-muted mx-auto mb-0" style="max-width: 650px; font-size: 15.5px;">
-                Authentic feedback from international commodity roasters, blenders, and hospitality procurement heads.
-            </p>
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 mb-md-5">
+            <div>
+                <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 13.5px;">
+                    Client Endorsements
+                </span>
+                <h2 class="section-title mb-2">Trusted by Global Importers &amp; Domestic Cafés</h2>
+                <p class="text-muted mb-0" style="max-width: 620px; font-size: 15px;">
+                    Authentic feedback from international commodity roasters, blenders, and hospitality procurement heads.
+                </p>
+            </div>
+            
+            <!-- Slider Navigation Arrows -->
+            <div class="d-flex align-items-center gap-2 mt-3 mt-md-0">
+                <div class="testimonial-slider-prev product-slider-btn" role="button" aria-label="Previous Slide">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="testimonial-slider-next product-slider-btn" role="button" aria-label="Next Slide">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
         </div>
 
-        <div class="row g-4">
-            <?php foreach ($testimonials as $t): ?>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up">
-                    <div class="p-4 bg-white rounded-4 border shadow-sm h-100 d-flex flex-column">
-                        <div class="d-flex text-warning mb-3">
-                            <?php 
-                            $stars = isset($t['tt_rating']) ? (int)$t['tt_rating'] : 5;
-                            for ($s = 1; $s <= 5; $s++): 
-                            ?>
-                                <i class="fa-<?= ($s <= $stars) ? 'solid' : 'regular' ?> fa-star"></i>
-                            <?php endfor; ?>
-                        </div>
-                        <p class="text-muted mb-4 fst-italic flex-grow-1" style="line-height: 1.7;">
-                            &ldquo;<?= htmlspecialchars($t['tt_detail']) ?>&rdquo;
-                        </p>
-                        <div class="d-flex align-items-center gap-3 pt-3 border-top">
-                            <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--bg3); display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--primary);">
-                                <?= strtoupper(substr($t['tt_name'], 0, 1)) ?>
+        <!-- Testimonial Swiper Container -->
+        <div class="testimonial-swiper-container">
+            <div class="swiper testimonial-swiper-active">
+                <div class="swiper-wrapper">
+                    <?php foreach ($testimonials as $t): ?>
+                        <div class="swiper-slide h-auto">
+                            <div class="testimonial-card-b2b p-4 bg-white rounded-4 border shadow-sm h-100 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <div class="d-flex text-warning">
+                                            <?php 
+                                            $stars = isset($t['tt_rating']) ? (int)$t['tt_rating'] : 5;
+                                            for ($s = 1; $s <= 5; $s++): 
+                                            ?>
+                                                <i class="fa-<?= ($s <= $stars) ? 'solid' : 'regular' ?> fa-star me-1" style="color: #E5A93C; font-size: 14px;"></i>
+                                            <?php endfor; ?>
+                                        </div>
+                                        <div class="text-muted text-opacity-25" style="font-size: 26px; line-height: 1;">
+                                            <i class="fa-solid fa-quote-right" style="color: rgba(18, 48, 35, 0.15);"></i>
+                                        </div>
+                                    </div>
+                                    <p class="text-muted mb-4 fst-italic" style="line-height: 1.7; font-size: 14.5px;">
+                                        &ldquo;<?= htmlspecialchars($t['tt_detail']) ?>&rdquo;
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center gap-3 pt-3 border-top">
+                                    <div style="width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #123023 0%, #1E4D38 100%); display: flex; align-items: center; justify-content: center; font-weight: bold; color: #FFFFFF; font-size: 16px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(18,48,35,0.2);">
+                                        <?= strtoupper(substr($t['tt_name'], 0, 1)) ?>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold mb-0 text-dark" style="font-size: 15px;"><?= htmlspecialchars($t['tt_name']) ?></h6>
+                                        <small class="text-muted" style="font-size: 12.5px;"><?= htmlspecialchars($t['tt_location']) ?></small>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <h6 class="fw-bold mb-0 text-dark"><?= htmlspecialchars($t['tt_name']) ?></h6>
-                                <small class="text-muted"><?= htmlspecialchars($t['tt_location']) ?></small>
-                            </div>
                         </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
-            <?php endforeach; ?>
+                <div class="testimonial-slider-pagination text-center mt-4"></div>
+            </div>
         </div>
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    if (typeof Swiper !== 'undefined' && document.querySelector('.testimonial-swiper-active')) {
+        if (!document.querySelector('.testimonial-swiper-active').swiper) {
+            new Swiper('.testimonial-swiper-active', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                speed: 750,
+                autoplay: {
+                    delay: 4500,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true
+                },
+                navigation: {
+                    nextEl: '.testimonial-slider-next',
+                    prevEl: '.testimonial-slider-prev',
+                },
+                pagination: {
+                    el: '.testimonial-slider-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 18
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 22
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 24
+                    }
+                }
+            });
+        }
+    }
+});
+</script>
 <?php endif; ?>
 
 <!-- 6. Modern FAQ Section (Open Layout with Full-Fill Image) -->
@@ -833,16 +900,16 @@ if (!empty($home_blogs)):
 ?>
 <section class="section-padding fix section-bg-3" style="background-color: var(--bg3);" data-aos="fade-up" data-aos-duration="850">
     <div class="container">
-        <div class="d-flex flex-wrap justify-content-between align-items-end mb-5" data-aos="fade-up">
+        <div class="d-flex flex-wrap justify-content-between align-items-end mb-4 mb-md-5" data-aos="fade-up">
             <div>
                 <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold"
-                    style="color: var(--gold); letter-spacing: 1.5px; font-size: 14px;">
+                    style="color: var(--gold); letter-spacing: 1.5px; font-size: 13.5px;">
                     Market Intelligence
                 </span>
-                <h2 style="font-size: 38px;" class="mb-1">
+                <h2 class="section-title mb-1">
                     Commodity Export Insights &amp; Trade Updates
                 </h2>
-                <p class="text-muted mb-0" style="max-width: 680px; font-size: 16px;">
+                <p class="text-muted mb-0" style="max-width: 680px; font-size: 15.5px;">
                     Stay informed on Indian harvest cycles, crop quality parameters, export specifications, and international maritime logistics.
                 </p>
             </div>
@@ -895,21 +962,21 @@ if (!empty($home_blogs)):
 <?php endif; ?>
 
 <!-- 8. Commercial Trade CTA Banner Section -->
-<section class="container my-5 py-4" data-aos="zoom-in" data-aos-duration="850">
-    <div class="b2b-cta-section text-center p-5">
+<section class="container my-4 my-md-5 py-2 py-md-4" data-aos="zoom-in" data-aos-duration="850">
+    <div class="b2b-cta-section text-center p-4 p-md-5">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <span class="badge bg-warning text-dark px-3 py-2 text-uppercase mb-3 fw-bold"
-                    style="letter-spacing: 1px;">
+                    style="letter-spacing: 1px; font-size: 12px;">
                     Commercial Trade Desk
                 </span>
-                <h2 class="text-white mb-3" style="font-size: 40px;">
+                <h2 class="section-title text-white mb-3">
                     Looking for Reliable Indian Commodity Supply?
                 </h2>
-                <p class="text-white-50 mb-4" style="font-size: 18px; line-height: 1.6;">
+                <p class="text-white-50 mb-4" style="font-size: 16px; line-height: 1.6;">
                     Share your product requirements and our team will get back to you with availability, specifications and export details.
                 </p>
-                <button type="button" class="theme-btn gold-btn px-4 py-3" style="font-size: 17px;"
+                <button type="button" class="theme-btn gold-btn px-4 py-3"
                     data-bs-toggle="modal" data-bs-target="#b2bEnquiryModal">
                     <i class="fa-solid fa-paper-plane me-2"></i> Send an Enquiry
                 </button>

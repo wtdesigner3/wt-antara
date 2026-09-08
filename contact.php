@@ -13,9 +13,9 @@ $contact = get_contact_info();
                 <div class="container">
                     <div class="page-heading text-center">
                         <div class="breadcrumb-sub-title">
-                            <h1 class="text-white wow fadeInUp" data-wow-delay=".3s" style="font-size: 46px;">Commercial Trade Desk &amp; Quick Inquiry</h1>
+                            <h1 class="page-banner-title text-white wow fadeInUp" data-wow-delay=".3s">Commercial Trade Desk &amp; Quick Inquiry</h1>
                         </div>
-                        <ul class="breadcrumb-items wow fadeInUp d-flex justify-content-center gap-2 list-unstyled mt-3" data-wow-delay=".5s" style="color: #E0E7E1;">
+                        <ul class="breadcrumb-items wow fadeInUp d-flex flex-wrap justify-content-center align-items-center gap-1 gap-sm-2 list-unstyled mt-3" data-wow-delay=".5s" style="color: #E0E7E1;">
                             <li><a href="index.php" class="text-white"><i class="fa-solid fa-house"></i> Home</a></li>
                             <li>/</li>
                             <li class="text-warning">Contact &amp; Trade Desk</li>
