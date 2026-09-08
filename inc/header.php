@@ -29,6 +29,7 @@ $export_nav_products = get_products_by_division('export');
 <head>
     <!-- ========== Meta Tags ========== -->
     <meta charset="UTF-8">
+    <base href="/">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Antara Globale">
@@ -144,7 +145,7 @@ $export_nav_products = get_products_by_division('export');
                                         <a href="index.php">Home</a>
                                     </li>
                                     <li class="<?= ($active_nav == 'about') ? 'active' : '' ?>">
-                                        <a href="about.php">About Us</a>
+                                        <a href="about">About Us</a>
                                     </li>
                                     
                                     <!-- Export & Supply with Dropdown -->
@@ -154,7 +155,7 @@ $export_nav_products = get_products_by_division('export');
                                         </a>
                                         <ul class="submenu">
                                             <li class="has-preview">
-                                                <a href="product-detail.php?slug=product-arabica">
+                                                <a href="product/product-arabica">
                                                     <span class="menu-item-icon"><i class="fa-solid fa-chevron-right"></i></span>
                                                     <span class="menu-item-text">Arabica Coffee Beans</span>
                                                 </a>
@@ -169,7 +170,7 @@ $export_nav_products = get_products_by_division('export');
                                                 </div>
                                             </li>
                                             <li class="has-preview">
-                                                <a href="product-detail.php?slug=product-robusta">
+                                                <a href="product/product-robusta">
                                                     <span class="menu-item-icon"><i class="fa-solid fa-chevron-right"></i></span>
                                                     <span class="menu-item-text">Robusta Coffee Beans</span>
                                                 </a>
@@ -184,7 +185,7 @@ $export_nav_products = get_products_by_division('export');
                                                 </div>
                                             </li>
                                             <li class="has-preview">
-                                                <a href="product-detail.php?slug=product-tea">
+                                                <a href="product/product-tea">
                                                     <span class="menu-item-icon"><i class="fa-solid fa-chevron-right"></i></span>
                                                     <span class="menu-item-text">Bulk Indian Tea</span>
                                                 </a>
@@ -199,7 +200,7 @@ $export_nav_products = get_products_by_division('export');
                                                 </div>
                                             </li>
                                             <li class="has-preview">
-                                                <a href="product-detail.php?slug=product-black-pepper">
+                                                <a href="product/product-black-pepper">
                                                     <span class="menu-item-icon"><i class="fa-solid fa-chevron-right"></i></span>
                                                     <span class="menu-item-text">Malabar Black Pepper</span>
                                                 </a>
@@ -214,7 +215,7 @@ $export_nav_products = get_products_by_division('export');
                                                 </div>
                                             </li>
                                             <li class="has-preview">
-                                                <a href="product-detail.php?slug=product-turmeric">
+                                                <a href="product/product-turmeric">
                                                     <span class="menu-item-icon"><i class="fa-solid fa-chevron-right"></i></span>
                                                     <span class="menu-item-text">Alleppey Turmeric</span>
                                                 </a>
@@ -238,7 +239,7 @@ $export_nav_products = get_products_by_division('export');
                                         </a>
                                         <ul class="submenu">
                                             <li class="has-preview">
-                                                <a href="product-detail.php?slug=supply-coffee">
+                                                <a href="product/supply-coffee">
                                                     <span class="menu-item-icon"><i class="fa-solid fa-chevron-right"></i></span>
                                                     <span class="menu-item-text">Coffee Solutions</span>
                                                 </a>
@@ -253,7 +254,7 @@ $export_nav_products = get_products_by_division('export');
                                                 </div>
                                             </li>
                                             <li class="has-preview">
-                                                <a href="product-detail.php?slug=supply-matcha">
+                                                <a href="product/supply-matcha">
                                                     <span class="menu-item-icon"><i class="fa-solid fa-chevron-right"></i></span>
                                                     <span class="menu-item-text">Matcha Powder</span>
                                                 </a>
@@ -268,7 +269,7 @@ $export_nav_products = get_products_by_division('export');
                                                 </div>
                                             </li>
                                             <li class="has-preview">
-                                                <a href="product-detail.php?slug=supply-tea">
+                                                <a href="product/supply-tea">
                                                     <span class="menu-item-icon"><i class="fa-solid fa-chevron-right"></i></span>
                                                     <span class="menu-item-text">Foodservice Tea</span>
                                                 </a>
@@ -283,7 +284,7 @@ $export_nav_products = get_products_by_division('export');
                                                 </div>
                                             </li>
                                             <li class="has-preview">
-                                                <a href="product-detail.php?slug=supply-sauces">
+                                                <a href="product/supply-sauces">
                                                     <span class="menu-item-icon"><i class="fa-solid fa-chevron-right"></i></span>
                                                     <span class="menu-item-text">Sauces &amp; Condiments</span>
                                                 </a>
@@ -298,7 +299,7 @@ $export_nav_products = get_products_by_division('export');
                                                 </div>
                                             </li>
                                             <li class="has-preview">
-                                                <a href="product-detail.php?slug=supply-syrups">
+                                                <a href="product/supply-syrups">
                                                     <span class="menu-item-icon"><i class="fa-solid fa-chevron-right"></i></span>
                                                     <span class="menu-item-text">Flavoured Syrups</span>
                                                 </a>
@@ -313,7 +314,7 @@ $export_nav_products = get_products_by_division('export');
                                                 </div>
                                             </li>
                                             <li class="has-preview">
-                                                <a href="product-detail.php?slug=supply-sugar">
+                                                <a href="product/supply-sugar">
                                                     <span class="menu-item-icon"><i class="fa-solid fa-chevron-right"></i></span>
                                                     <span class="menu-item-text">Commercial Sugar</span>
                                                 </a>
@@ -328,7 +329,7 @@ $export_nav_products = get_products_by_division('export');
                                                 </div>
                                             </li>
                                             <li class="has-preview">
-                                                <a href="product-detail.php?slug=supply-green-coffee">
+                                                <a href="product/supply-green-coffee">
                                                     <span class="menu-item-icon"><i class="fa-solid fa-chevron-right"></i></span>
                                                     <span class="menu-item-text">Green Coffee Beans</span>
                                                 </a>
@@ -343,7 +344,7 @@ $export_nav_products = get_products_by_division('export');
                                                 </div>
                                             </li>
                                             <li class="has-preview">
-                                                <a href="product-detail.php?slug=supply-custom-procurement">
+                                                <a href="product/supply-custom-procurement">
                                                     <span class="menu-item-icon"><i class="fa-solid fa-chevron-right"></i></span>
                                                     <span class="menu-item-text">Custom Procurement</span>
                                                 </a>
@@ -361,7 +362,7 @@ $export_nav_products = get_products_by_division('export');
                                     </li>
 
                                     <li class="<?= ($active_nav == 'contact') ? 'active' : '' ?>">
-                                        <a href="contact.php">Contact</a>
+                                        <a href="contact">Contact</a>
                                     </li>
                                 </ul>
                             </nav>

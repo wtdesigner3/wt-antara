@@ -264,41 +264,40 @@ if ($has_home_about_head || $has_home_about_body || $has_home_about_img):
                         <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Wholesalers</span>
                         <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Retail Brands</span>
                         <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Food Manufacturers</span>
-                    </div>
-                    <div class="mt-auto pt-3">
-                        <a href="product-detail.php?slug=product-arabica" class="theme-btn btn-sm">
+                    </div>                    <div class="mt-auto pt-3">
+                        <a href="product/product-arabica" class="theme-btn btn-sm">
                             Explore Export Commodities <i class="fa-solid fa-arrow-right ms-1"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Industry 2: HORECA -->
+            <!-- Card 2: Restaurant & Café Supply (HORECA) -->
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="b2b-industry-card">
-                    <div class="b2b-industry-header">
-                        <div class="b2b-industry-icon">
-                            <img src="assets/img/icons/industry-horeca.svg" alt="Hospitality &amp; Food Service">
+                <div class="industry-serve-card h-100 p-4 p-md-5 d-flex flex-column justify-content-between" style="background: #FFFFFF; border-radius: 20px; border: 1.5px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <div class="industry-card-icon-wrap" style="width: 56px; height: 56px; background: rgba(197, 160, 89, 0.12); border-radius: 14px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fa-solid fa-utensils text-warning fs-3"></i>
                         </div>
                         <div>
-                            <span class="b2b-industry-badge">Hospitality &amp; Food Service</span>
-                            <h3>HORECA Sector</h3>
+                            <span class="badge mb-1 px-3 py-1 fw-bold text-uppercase" style="background: rgba(197, 160, 89, 0.15); color: #8A6D2B; font-size: 11px; letter-spacing: 0.5px;">B2B Foodservice</span>
+                            <h3 class="mb-0 fw-bold" style="color: var(--header); font-size: 24px;">Restaurant &amp; Café Supply</h3>
                         </div>
                     </div>
-                    <p class="text-muted mb-4" style="font-size: 15px; line-height: 1.7;">
-                        Dedicated wholesale supply delivering coffee beans, matcha, teas, condiments (Veeba), syrups, sugars, and custom food procurement to professional kitchens.
+                    <p class="text-muted mb-4" style="line-height: 1.7; font-size: 15px;">
+                        Reliable single-source foodservice partner for commercial kitchens, café franchises, boutique roasteries, and hospitality chains. We distribute barista espresso beans, pure green coffee for master roasters, ceremonial matcha, kitchen-grade sauces &amp; condiments (Veeba), artisanal beverage syrups, and commercial portion sugar sachets.
                     </p>
                     <h6 class="fw-bold mb-3" style="color: var(--header); font-size: 13.5px; text-transform: uppercase; letter-spacing: 0.5px;">Who We Supply:</h6>
                     <div class="industry-client-list">
-                        <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Hotels</span>
-                        <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Restaurants</span>
-                        <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Cafés</span>
-                        <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Caterers</span>
+                        <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Café Chains &amp; Franchises</span>
+                        <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Specialty Roasters</span>
+                        <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Fine Dining &amp; QSRs</span>
                         <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Cloud Kitchens</span>
+                        <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Hotel &amp; Resort Groups</span>
                     </div>
                     <div class="mt-auto pt-3">
-                        <a href="supply-coffee.php" class="theme-btn gold-btn btn-sm">
-                            Explore Foodservice Products <i class="fa-solid fa-arrow-right ms-1"></i>
+                        <a href="product/supply-coffee" class="theme-btn btn-sm">
+                            Explore Restaurant &amp; Café Supplies <i class="fa-solid fa-arrow-right ms-1"></i>
                         </a>
                     </div>
                 </div>
@@ -307,34 +306,35 @@ if ($has_home_about_head || $has_home_about_body || $has_home_about_img):
     </div>
 </section>
 
-<!-- 3. Dynamic Export Commodity Carousel Section (Live from MySQL) -->
-<section class="section-padding fix section-bg-3" style="background-color: var(--bg3);" data-aos="fade-up" data-aos-duration="850">
+<!-- 3. Export Agricultural Commodities Slider (Live Dynamic from MySQL) -->
+<section class="section-padding bg-cover" style="background-color: #F8FAF9;" data-aos="fade-up">
     <div class="container">
-        <div class="d-flex flex-wrap justify-content-between align-items-end mb-4 pb-2" data-aos="fade-up">
+        <div class="d-flex flex-wrap justify-content-between align-items-end mb-5">
             <div>
                 <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 14px;">
-                    Core Commodity Portfolio
+                    International Trade &bull; Origin India
                 </span>
                 <h2 style="font-size: 38px;" class="mb-1">
-                    Export-Grade Agricultural Commodities
+                    Export Agricultural Commodities
                 </h2>
                 <p class="text-muted mb-0" style="max-width: 650px; font-size: 15.5px;">
-                    Sourced directly from leading cultivation belts across India for roasters, importers, blenders, and commercial buyers.
+                    Direct-from-origin export commodities loaded at Indian sea ports in multi-ton FCL &amp; LCL container consignments.
                 </p>
             </div>
-            <div class="product-slider-ctrl mt-3 mt-md-0">
-                <div class="product-slider-btn product-slider-prev" aria-label="Previous Commodity">
+            <!-- Slider Navigation Controls -->
+            <div class="product-slider-nav-wrap d-flex align-items-center gap-2 mt-3 mt-md-0">
+                <div class="product-slider-prev slider-arrow-circle" title="Previous Commodity">
                     <i class="fa-solid fa-arrow-left"></i>
                 </div>
-                <div class="product-slider-btn product-slider-next" aria-label="Next Commodity">
+                <div class="product-slider-next slider-arrow-circle" title="Next Commodity">
                     <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </div>
         </div>
 
         <!-- Swiper Carousel Container -->
-        <div class="product-swiper-container" data-aos="fade-up" data-aos-delay="150">
-            <div class="swiper product-swiper-active">
+        <div class="product-swiper-container">
+            <div class="swiper product-slider-active">
                 <div class="swiper-wrapper">
 
                     <?php foreach ($export_products as $prod): ?>
@@ -343,17 +343,17 @@ if ($has_home_about_head || $has_home_about_body || $has_home_about_img):
                                 <div class="b2b-card-bg">
                                     <img src="<?= htmlspecialchars($prod['image']) ?>" alt="<?= htmlspecialchars($prod['name']) ?>">
                                 </div>
-                                <a href="product-detail.php?slug=<?= htmlspecialchars($prod['slug']) ?>" class="b2b-card-circle-btn" title="View Specifications">
+                                <a href="product/<?= htmlspecialchars($prod['slug']) ?>" class="b2b-card-circle-btn" title="View Specifications">
                                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                 </a>
                                 <div class="b2b-card-glass-bottom">
                                     <h3 class="b2b-card-glass-title">
-                                        <a href="product-detail.php?slug=<?= htmlspecialchars($prod['slug']) ?>"><?= htmlspecialchars($prod['name']) ?></a>
+                                        <a href="product/<?= htmlspecialchars($prod['slug']) ?>"><?= htmlspecialchars($prod['name']) ?></a>
                                     </h3>
                                     <div class="b2b-card-glass-sub">
                                         <i class="fa-solid fa-location-dot text-warning me-1"></i> <?= htmlspecialchars($prod['tagline']) ?>
                                     </div>
-                                    <a href="product-detail.php?slug=<?= htmlspecialchars($prod['slug']) ?>" class="b2b-btn-white-pill">
+                                    <a href="product/<?= htmlspecialchars($prod['slug']) ?>" class="b2b-btn-white-pill">
                                         View Product <i class="fa-solid fa-arrow-right"></i>
                                     </a>
                                 </div>
@@ -384,7 +384,7 @@ if ($has_home_about_head || $has_home_about_body || $has_home_about_img):
                 </p>
             </div>
             <div class="mt-3 mt-md-0">
-                <a href="supply-coffee.php" class="theme-btn">
+                <a href="product/supply-coffee" class="theme-btn">
                     View Foodservice Catalog <i class="fa-solid fa-arrow-right ms-1"></i>
                 </a>
             </div>
@@ -397,17 +397,17 @@ if ($has_home_about_head || $has_home_about_body || $has_home_about_img):
                         <div class="b2b-card-bg">
                             <img src="<?= htmlspecialchars($hp['image']) ?>" alt="<?= htmlspecialchars($hp['name']) ?>">
                         </div>
-                        <a href="product-detail.php?slug=<?= htmlspecialchars($hp['slug']) ?>" class="b2b-card-circle-btn" title="View Product Details">
+                        <a href="product/<?= htmlspecialchars($hp['slug']) ?>" class="b2b-card-circle-btn" title="View Product Details">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
                         <div class="b2b-card-glass-bottom">
                             <h3 class="b2b-card-glass-title">
-                                <a href="product-detail.php?slug=<?= htmlspecialchars($hp['slug']) ?>"><?= htmlspecialchars($hp['name']) ?></a>
+                                <a href="product/<?= htmlspecialchars($hp['slug']) ?>"><?= htmlspecialchars($hp['name']) ?></a>
                             </h3>
                             <div class="b2b-card-glass-sub">
                                 <i class="fa-solid fa-utensils text-warning me-1"></i> <?= htmlspecialchars($hp['tagline']) ?>
                             </div>
-                            <a href="product-detail.php?slug=<?= htmlspecialchars($hp['slug']) ?>" class="b2b-btn-white-pill">
+                            <a href="product/<?= htmlspecialchars($hp['slug']) ?>" class="b2b-btn-white-pill">
                                 View Product <i class="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
@@ -418,15 +418,15 @@ if ($has_home_about_head || $has_home_about_body || $has_home_about_img):
     </div>
 </section>
 
-<!-- 3.8 Visual Indian Growing Belts Terroir Showcase -->
-<section class="section-padding fix" style="background: linear-gradient(135deg, #143528 0%, #0F261D 100%); color: #FFFFFF;" data-aos="fade-up" data-aos-duration="850">
+<!-- 4. Terroir Sourcing Map / Provenance Section (Live Dynamic from MySQL) -->
+<section class="section-padding bg-cover" style="background-color: #0E251A;" data-aos="fade-up">
     <div class="container">
-        <div class="d-flex flex-wrap justify-content-between align-items-end mb-5" data-aos="fade-up">
+        <div class="d-flex flex-wrap justify-content-between align-items-end mb-5">
             <div>
                 <span class="sub-title-3 mb-2 d-inline-block text-uppercase fw-bold" style="color: var(--gold); letter-spacing: 1.5px; font-size: 14px;">
-                    Indian Agricultural Terroir
+                    Geographic Provenance &bull; Farm Origin
                 </span>
-                <h2 style="font-size: 38px;" class="mb-1 text-white">
+                <h2 class="text-white mb-1" style="font-size: 38px;">
                     <?= clean_output($home['terroir_heading'] ?? 'Prime Sourcing Belts Across India') ?>
                 </h2>
                 <p class="text-white-50 mb-0" style="max-width: 650px; font-size: 15.5px;">
@@ -434,7 +434,7 @@ if ($has_home_about_head || $has_home_about_body || $has_home_about_img):
                 </p>
             </div>
             <div class="mt-3 mt-md-0">
-                <a href="product-detail.php?slug=product-arabica" class="theme-btn border-btn">
+                <a href="product/product-arabica" class="theme-btn border-btn">
                     Explore Origin Products <i class="fa-solid fa-arrow-right ms-1"></i>
                 </a>
             </div>

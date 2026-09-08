@@ -8,19 +8,33 @@ DirectoryIndex index.php index.html
 # 2. Custom Error Documents
 ErrorDocument 404 /404.html
 
-# 3. Dynamic URL Rewriting (Single Master Dynamic Files)
+# 3. Dynamic URL Rewriting (Clean SEO Slugs for Inner Pages & Products)
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
 
-    # Route legacy/clean product URLs to single master dynamic product-detail.php
-    RewriteRule ^product-([a-zA-Z0-9_-]+)\.php$ product-detail.php?slug=product-$1 [L,QSA]
-    RewriteRule ^supply-([a-zA-Z0-9_-]+)\.php$ product-detail.php?slug=supply-$1 [L,QSA]
+    # Don't rewrite real existing files or directories
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Clean Top-level Pages
+    RewriteRule ^about/?$ about.php [L,QSA]
+    RewriteRule ^contact/?$ contact.php [L,QSA]
+    RewriteRule ^blog/?$ blog.php [L,QSA]
+    RewriteRule ^export-supply/?$ export-supply.php [L,QSA]
+    RewriteRule ^restaurant-cafe-supply/?$ restaurant-cafe-supply.php [L,QSA]
+
+    # Clean Dynamic Product & Commodity Routes: /product/product-tea
     RewriteRule ^product/([a-zA-Z0-9_-]+)/?$ product-detail.php?slug=$1 [L,QSA]
 
-    # Route legacy/clean blog URLs to single master dynamic blog-detail.php
-    RewriteRule ^blog-details\.php$ blog-detail.php [L,QSA]
+    # Clean Dynamic Blog Article Routes: /blog/top-10-indian-spices
     RewriteRule ^blog/([a-zA-Z0-9_-]+)/?$ blog-detail.php?slug=$1 [L,QSA]
+
+    # Legacy bridges compatibility
+    RewriteRule ^product-([a-zA-Z0-9_-]+)\.php$ product-detail.php?slug=product-$1 [L,QSA]
+    RewriteRule ^supply-([a-zA-Z0-9_-]+)\.php$ product-detail.php?slug=supply-$1 [L,QSA]
+    RewriteRule ^blog-details\.php$ blog-detail.php [L,QSA]
 </IfModule>
 
 # 4. Security: Block direct HTTP access to sensitive files
@@ -39,7 +53,7 @@ ErrorDocument 404 /404.html
     AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml image/svg+xml
 </IfModule>
 
-# 6. Browser Caching for Performance
+# 6. Browser Caching for High Performance
 <IfModule mod_expires.c>
     ExpiresActive On
     ExpiresByType image/jpg "access plus 1 month"

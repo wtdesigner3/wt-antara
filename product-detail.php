@@ -352,17 +352,17 @@ if (count($related_products) < 6) {
                                                 <div class="b2b-card-bg">
                                                     <img src="<?= clean_output($rel['image']) ?>" alt="<?= clean_output($rel['name']) ?>">
                                                 </div>
-                                                <a href="product-detail.php?slug=<?= clean_output($rel['slug']) ?>" class="b2b-card-circle-btn" title="View Specifications">
+                                                <a href="product/<?= clean_output($rel['slug']) ?>" class="b2b-card-circle-btn" title="View Specifications">
                                                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                                 </a>
                                                 <div class="b2b-card-glass-bottom">
                                                     <h3 class="b2b-card-glass-title">
-                                                        <a href="product-detail.php?slug=<?= clean_output($rel['slug']) ?>"><?= clean_output($rel['name']) ?></a>
+                                                        <a href="product/<?= clean_output($rel['slug']) ?>"><?= clean_output($rel['name']) ?></a>
                                                     </h3>
                                                     <div class="b2b-card-glass-sub">
                                                         <i class="fa-solid <?= ($rel['division'] == 'export') ? 'fa-location-dot' : 'fa-utensils' ?> text-warning me-1"></i> <?= clean_output($rel['tagline']) ?>
                                                     </div>
-                                                    <a href="product-detail.php?slug=<?= clean_output($rel['slug']) ?>" class="b2b-btn-white-pill">
+                                                    <a href="product/<?= clean_output($rel['slug']) ?>" class="b2b-btn-white-pill">
                                                         View Product <i class="fa-solid fa-arrow-right"></i>
                                                     </a>
                                                 </div>
