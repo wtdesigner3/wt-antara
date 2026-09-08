@@ -1,0 +1,14 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Soft Circular Background -->
+  <circle cx="32" cy="32" r="30" fill="#F4EFE6"/>
+  
+  <!-- Outer Globe / Sourcing Ring -->
+  <circle cx="32" cy="32" r="22" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M10 32H54" stroke="#1B4D3E" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="32" cy="32" rx="11" ry="22" stroke="#1B4D3E" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Sprout / Farmgate Leaf in Gold -->
+  <path d="M32 36C32 28 39 22 43 21C43 27 38 34 32 36Z" fill="#C5A059"/>
+  <path d="M32 36C32 30 26 25 22 25C23 31 27 35 32 36Z" fill="#1B4D3E"/>
+  <path d="M32 44V34" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

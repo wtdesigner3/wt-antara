@@ -1,0 +1,18 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer Gold Shield Border with Depth -->
+  <path d="M13 25C13 37 22 47.5 32 52C42 47.5 51 37 51 25V13L32 7L13 13V25Z" fill="#C5A059" stroke="#9A7736" stroke-width="1.5" stroke-linejoin="round"/>
+  
+  <!-- Inner Forest Green Shield -->
+  <path d="M17 25.5C17 35.5 24.5 44 32 48C39.5 44 47 35.5 47 25.5V15.5L32 10.5L17 15.5V25.5Z" fill="#1B4D3E"/>
+  
+  <!-- Inner Shield Highlight Contour -->
+  <path d="M20 26C20 33.5 25.8 40.5 32 44C38.2 40.5 44 33.5 44 26V18L32 14L20 18V26Z" fill="#122B22" fill-opacity="0.6"/>
+  
+  <!-- Certified Checkmark in Gold / White -->
+  <path d="M25 28.5L30 33.5L39 23" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Quality Accent Stars / Circles -->
+  <circle cx="32" cy="18" r="2.2" fill="#C5A059"/>
+  <circle cx="26" cy="20" r="1.6" fill="#C5A059"/>
+  <circle cx="38" cy="20" r="1.6" fill="#C5A059"/>
+</svg>

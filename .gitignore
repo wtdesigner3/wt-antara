@@ -1,0 +1,58 @@
+# ==============================================================================
+# Environment & Production Secrets (Keep on Server, Never in Git)
+# ==============================================================================
+inc/db_config.prod.php
+inc/db_config.local.php
+.env
+.env.*
+
+# ==============================================================================
+# Duplicate / Clone / Old Demo Archives
+# ==============================================================================
+antara-globale/
+_demo_templates_archive/
+antara.zip
+myadmin.zip
+*.zip
+*.tar.gz
+*.rar
+
+# ==============================================================================
+# Temporary Scratch & Migration Scripts
+# ==============================================================================
+temp_*.php
+update_db*.php
+scratch/
+.tempmediaStorage/
+.user_uploaded/
+
+# ==============================================================================
+# Static HTML Mocks (Only dynamic PHP files & 404.html are used in production)
+# ==============================================================================
+about.html
+contact.html
+export-supply.html
+index.html
+product-arabica.html
+product-black-pepper.html
+product-robusta.html
+product-tea.html
+product-turmeric.html
+products.html
+restaurant-cafe-supply.html
+
+# ==============================================================================
+# OS & Editor Files
+# ==============================================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+.gemini/
+
+# ==============================================================================
+# Dependencies (if any)
+# ==============================================================================
+node_modules/
+vendor/

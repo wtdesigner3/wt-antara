@@ -1,0 +1,41 @@
+[26-Aug-2023 06:27:33 UTC] PHP Warning:  Undefined array key "id_it" in /home/qt1kfqmf7lf4/public_html/serene/cms/admin/delete/itinerary-highlights.php on line 7
+[26-Aug-2023 08:51:30 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/qt1kfqmf7lf4/public_html/serene/cms/admin/delete/hotdeals-itinerary-highlights.php on line 7
+[25-Sep-2023 05:44:59 UTC] PHP Warning:  require(checksession.php): Failed to open stream: No such file or directory in /home/qt1kfqmf7lf4/public_html/serene/cms/admin/delete/itinerary.php on line 2
+[25-Sep-2023 05:44:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'checksession.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/qt1kfqmf7lf4/public_html/serene/cms/admin/delete/itinerary.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/qt1kfqmf7lf4/public_html/serene/cms/admin/delete/itinerary.php on line 2
+[28-Sep-2023 19:24:06 UTC] PHP Warning:  Undefined array key "cid" in /home/qt1kfqmf7lf4/public_html/serene/cms/admin/delete/blogtags.php on line 4
+[09-Oct-2023 09:15:04 UTC] PHP Warning:  Undefined array key "burl" in /home/qt1kfqmf7lf4/public_html/rupyaapaisa/cms/rupyaapaisa_admin/delete/businesstype.php on line 4
+[09-Oct-2023 09:34:59 UTC] PHP Warning:  Undefined array key "burl" in /home/qt1kfqmf7lf4/public_html/rupyaapaisa/cms/rupyaapaisa_admin/delete/business.php on line 4
+[10-Jan-2024 06:14:54 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'carolieto_db.tbl_safety' doesn't exist in /home/v73qc9m70kd5/public_html/carolieto/cms/admin/delete/focusingon.php:5
+Stack trace:
+#0 /home/v73qc9m70kd5/public_html/carolieto/cms/admin/delete/focusingon.php(5): mysqli_query()
+#1 {main}
+  thrown in /home/v73qc9m70kd5/public_html/carolieto/cms/admin/delete/focusingon.php on line 5
+[10-Jan-2024 08:37:57 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'vt_id' in 'where clause' in /home/v73qc9m70kd5/public_html/carolieto/cms/admin/delete/colors.php:5
+Stack trace:
+#0 /home/v73qc9m70kd5/public_html/carolieto/cms/admin/delete/colors.php(5): mysqli_query()
+#1 {main}
+  thrown in /home/v73qc9m70kd5/public_html/carolieto/cms/admin/delete/colors.php on line 5
+[28-Feb-2024 07:21:11 UTC] PHP Warning:  Undefined array key "pid" in /home/v73qc9m70kd5/public_html/blue-horse/24feb/admin/delete/portfolio.php on line 4
+[28-Feb-2024 09:16:52 UTC] PHP Warning:  Undefined array key "cid" in /home/v73qc9m70kd5/public_html/blue-horse/24feb/admin/delete/industry.php on line 3
+[28-Feb-2024 11:28:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'blue_horse_db.tbl_videos' doesn't exist in /home/v73qc9m70kd5/public_html/blue-horse/24feb/admin/delete/videos-category.php:4
+Stack trace:
+#0 /home/v73qc9m70kd5/public_html/blue-horse/24feb/admin/delete/videos-category.php(4): mysqli_query()
+#1 {main}
+  thrown in /home/v73qc9m70kd5/public_html/blue-horse/24feb/admin/delete/videos-category.php on line 4
+[24-Apr-2024 09:10:54 UTC] PHP Warning:  Undefined array key "bid" in /home/v73qc9m70kd5/public_html/decora/cms/admin/delete/gallery.php on line 3
+[24-Apr-2024 10:30:01 UTC] PHP Warning:  Undefined array key "bid" in /home/v73qc9m70kd5/public_html/decora/cms/admin/delete/turnkey-category.php on line 3
+[27-Apr-2024 06:47:16 UTC] PHP Warning:  Undefined array key "bid" in /home/v73qc9m70kd5/public_html/decora/cms/admin/delete/category.php on line 3
+[27-Apr-2024 06:47:25 UTC] PHP Warning:  Undefined array key "bid" in /home/v73qc9m70kd5/public_html/decora/cms/admin/delete/category.php on line 3
+[08-May-2024 07:08:40 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ddg_legal_db.tbl_team' doesn't exist in /home/v73qc9m70kd5/public_html/DDG-Legal/cms/admin/delete/clients.php:5
+Stack trace:
+#0 /home/v73qc9m70kd5/public_html/DDG-Legal/cms/admin/delete/clients.php(5): mysqli_query()
+#1 {main}
+  thrown in /home/v73qc9m70kd5/public_html/DDG-Legal/cms/admin/delete/clients.php on line 5
+[22-Aug-2024 11:41:58 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ddg_legal_db.tbl_blogs' doesn't exist in /home/v73qc9m70kd5/public_html/DDG-Legal/cms/admin/delete/case-study.php:5
+Stack trace:
+#0 /home/v73qc9m70kd5/public_html/DDG-Legal/cms/admin/delete/case-study.php(5): mysqli_query()
+#1 {main}
+  thrown in /home/v73qc9m70kd5/public_html/DDG-Legal/cms/admin/delete/case-study.php on line 5
