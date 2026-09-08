@@ -230,7 +230,7 @@ if ($has_ind1 || $has_ind2):
                         <?php endif; ?>
                         <?php if (!empty(trim($about['ind1_btn_text'] ?? ''))): ?>
                             <div class="mt-auto pt-3">
-                                <a href="<?= clean_output(!empty($about['ind1_btn_link']) ? $about['ind1_btn_link'] : 'product-arabica.php') ?>" class="theme-btn btn-sm">
+                                <a href="<?= clean_output(!empty($about['ind1_btn_link']) ? $about['ind1_btn_link'] : 'product-detail.php?slug=product-arabica') ?>" class="theme-btn btn-sm">
                                     <?= clean_output($about['ind1_btn_text']) ?> <i class="fa-solid fa-arrow-right ms-1"></i>
                                 </a>
                             </div>
@@ -324,12 +324,12 @@ if ($has_cap_head || $has_cap_body || $has_cap_img || $has_cap_btn1):
                 <?php if ($has_cap_btn1 || $has_cap_btn2): ?>
                     <div class="d-flex flex-wrap gap-3">
                         <?php if ($has_cap_btn1): ?>
-                            <a href="<?= clean_output(!empty($about['capabilities_btn1_link']) ? $about['capabilities_btn1_link'] : 'product-arabica.php') ?>" class="theme-btn">
+                            <a href="<?= clean_output(!empty($about['capabilities_btn1_link']) ? $about['capabilities_btn1_link'] : 'product-detail.php?slug=product-arabica') ?>" class="theme-btn">
                                 <?= clean_output($about['capabilities_btn1_text']) ?> <i class="fa-solid fa-arrow-right ms-1"></i>
                             </a>
                         <?php endif; ?>
                         <?php if ($has_cap_btn2): ?>
-                            <a href="<?= clean_output(!empty($about['capabilities_btn2_link']) ? $about['capabilities_btn2_link'] : 'supply-coffee.php') ?>" class="theme-btn border-btn text-dark" style="border-color: var(--theme); color: var(--theme) !important;">
+                            <a href="<?= clean_output(!empty($about['capabilities_btn2_link']) ? $about['capabilities_btn2_link'] : 'product-detail.php?slug=supply-coffee') ?>" class="theme-btn border-btn text-dark" style="border-color: var(--theme); color: var(--theme) !important;">
                                 <?= clean_output($about['capabilities_btn2_text']) ?>
                             </a>
                         <?php endif; ?>

@@ -266,7 +266,7 @@ if ($has_home_about_head || $has_home_about_body || $has_home_about_img):
                         <span class="industry-client-chip"><i class="fa-solid fa-check"></i> Food Manufacturers</span>
                     </div>
                     <div class="mt-auto pt-3">
-                        <a href="product-arabica.php" class="theme-btn btn-sm">
+                        <a href="product-detail.php?slug=product-arabica" class="theme-btn btn-sm">
                             Explore Export Commodities <i class="fa-solid fa-arrow-right ms-1"></i>
                         </a>
                     </div>
@@ -434,7 +434,7 @@ if ($has_home_about_head || $has_home_about_body || $has_home_about_img):
                 </p>
             </div>
             <div class="mt-3 mt-md-0">
-                <a href="product-arabica.php" class="theme-btn border-btn">
+                <a href="product-detail.php?slug=product-arabica" class="theme-btn border-btn">
                     Explore Origin Products <i class="fa-solid fa-arrow-right ms-1"></i>
                 </a>
             </div>
