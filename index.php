@@ -333,8 +333,8 @@ if ($has_home_about_head || $has_home_about_body || $has_home_about_img):
         </div>
 
         <!-- Swiper Carousel Container -->
-        <div class="product-swiper-container">
-            <div class="swiper product-slider-active">
+        <div class="product-swiper-container" data-aos="fade-up" data-aos-delay="150">
+            <div class="swiper product-swiper-active">
                 <div class="swiper-wrapper">
 
                     <?php foreach ($export_products as $prod): ?>
@@ -367,6 +367,52 @@ if ($has_home_about_head || $has_home_about_body || $has_home_about_img):
         </div>
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    if (typeof Swiper !== 'undefined' && document.querySelector('.product-swiper-active')) {
+        if (!document.querySelector('.product-swiper-active').swiper) {
+            new Swiper('.product-swiper-active', {
+                slidesPerView: 1,
+                spaceBetween: 24,
+                loop: true,
+                speed: 800,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true
+                },
+                navigation: {
+                    nextEl: '.product-slider-next',
+                    prevEl: '.product-slider-prev',
+                },
+                pagination: {
+                    el: '.product-slider-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 1.3,
+                        spaceBetween: 18
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 24
+                    },
+                    1200: {
+                        slidesPerView: 4,
+                        spaceBetween: 24
+                    }
+                }
+            });
+        }
+    }
+});
+</script>
 
 <!-- 3.5 Restaurant & Café Supplies Grid (All 8 Categories Live from MySQL) -->
 <section class="section-padding fix" style="background-color: #FFFFFF;" data-aos="fade-up">
