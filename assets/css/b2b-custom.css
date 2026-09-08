@@ -2833,28 +2833,48 @@ body {
   font-weight: 700 !important;
 }
 
-/* Tablet & Mobile Responsiveness */
+/* Tablet & Mobile Responsiveness - Perfectly Balanced & Centered */
+@media (max-width: 1199px) {
+  .breadcrumb-wrapper {
+    padding: 55px 0 !important;
+    min-height: 240px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .breadcrumb-wrapper .container {
+    margin: auto !important;
+  }
+  .breadcrumb-wrapper .page-heading {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+}
+
 @media (max-width: 991px) {
   .breadcrumb-wrapper {
-    padding: 160px 0 75px !important;
-    min-height: 320px !important;
+    padding: 48px 0 !important;
+    min-height: 220px !important;
   }
   .breadcrumb-wrapper .page-heading h1 {
-    font-size: 34px !important;
+    font-size: 32px !important;
+    margin-bottom: 10px !important;
   }
 }
 
 @media (max-width: 575px) {
   .breadcrumb-wrapper {
-    padding: 140px 0 60px !important;
-    min-height: 280px !important;
+    padding: 40px 0 !important;
+    min-height: 190px !important;
   }
   .breadcrumb-wrapper .page-heading h1 {
-    font-size: 27px !important;
+    font-size: 24px !important;
+    margin-bottom: 8px !important;
   }
   .breadcrumb-wrapper .page-heading .breadcrumb-items {
-    padding: 6px 16px !important;
-    font-size: 12px !important;
+    padding: 5px 14px !important;
+    font-size: 11.5px !important;
+    margin: 8px auto 0 !important;
   }
 }
 
@@ -3933,23 +3953,32 @@ textarea.compact-input,
 
   /* Page Header / Banner / Breadcrumb */
   .breadcrumb-wrapper {
-    padding: 95px 0 35px !important;
+    padding: 42px 0 !important;
+    min-height: 200px !important;
     background-position: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .breadcrumb-wrapper .container {
+    margin: auto !important;
   }
 
   .breadcrumb-sub-title h1,
   .page-heading h1 {
-    font-size: clamp(20px, 6vw, 28px) !important;
+    font-size: clamp(22px, 5.5vw, 28px) !important;
     line-height: 1.25 !important;
     padding: 0 8px;
+    margin-bottom: 8px !important;
   }
 
   .breadcrumb-items {
     font-size: 12px !important;
-    padding: 6px 14px !important;
+    padding: 6px 16px !important;
     max-width: 95% !important;
-    margin: 12px auto 0 !important;
-    border-radius: 24px !important;
+    margin: 8px auto 0 !important;
+    border-radius: 50px !important;
   }
 
   .breadcrumb-items li {
