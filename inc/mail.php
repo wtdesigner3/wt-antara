@@ -18,7 +18,8 @@ defined('SMTP_SECURE') || define('SMTP_SECURE', 'ssl');
 defined('SMTP_USER') || define('SMTP_USER', 'Taran@antaraglobale.com');
 defined('SMTP_PASS') || define('SMTP_PASS', 'Nc9ORA=c@!');
 defined('SMTP_FROM_NAME') || define('SMTP_FROM_NAME', 'Antara Globale Trade Desk');
-defined('MAIL_NOTIFICATION_TO') || define('MAIL_NOTIFICATION_TO', 'wtdesigner3@gmail.com');
+defined('MAIL_NOTIFICATION_TO') || define('MAIL_NOTIFICATION_TO', 'Taran@antaraglobale.com');
+defined('MAIL_NOTIFICATION_CC') || define('MAIL_NOTIFICATION_CC', 'wtdesigner3@gmail.com');
 
 /**
  * Send B2B Enquiry Alert Email
@@ -41,9 +42,12 @@ function send_enquiry_notification($data) {
         $mail->CharSet    = 'UTF-8';
         $mail->Timeout    = 12;
 
-        // Sender & Recipient
+        // Sender & Recipients (Primary TO + CC)
         $mail->setFrom(SMTP_USER, SMTP_FROM_NAME);
-        $mail->addAddress(MAIL_NOTIFICATION_TO, 'Trade Desk Admin');
+        $mail->addAddress(MAIL_NOTIFICATION_TO, 'Antara Trade Desk');
+        if (defined('MAIL_NOTIFICATION_CC') && !empty(MAIL_NOTIFICATION_CC)) {
+            $mail->addCC(MAIL_NOTIFICATION_CC, 'WT Designer');
+        }
 
         // Set Reply-To as Customer's Email
         if (!empty($data['email'])) {
