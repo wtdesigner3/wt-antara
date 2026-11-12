@@ -484,6 +484,8 @@ INSERT INTO `tbl_product` VALUES (1,2,'horeca','Coffee Solutions','supply-coffee
 /*!40000 ALTER TABLE `tbl_product` ENABLE KEYS */;
 UNLOCK TABLES;
 
+ALTER TABLE `tbl_product` ADD COLUMN `long_description` longtext DEFAULT NULL AFTER `description`;
+
 --
 -- Table structure for table `tbl_profile`
 --

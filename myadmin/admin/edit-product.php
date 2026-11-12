@@ -1,6 +1,7 @@
 <?php 
 require('checksession.php'); 
 require('../inc/function.php');
+ensure_product_long_description_column();
 
 $msg = "";
 $error = "";
@@ -20,6 +21,7 @@ if (isset($_POST['update_product'])) {
     $slug = mysqli_real_escape_string($conn, strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $_POST['slug'] ?: $_POST['name']))));
     $tagline = mysqli_real_escape_string($conn, $_POST['tagline']);
     $description = mysqli_real_escape_string($conn, $_POST['description']);
+    $long_description = mysqli_real_escape_string($conn, $_POST['long_description'] ?? '');
     $varieties = mysqli_real_escape_string($conn, $_POST['available_varieties']);
     $brands = mysqli_real_escape_string($conn, $_POST['brands']);
     $specifications = mysqli_real_escape_string($conn, $_POST['specifications']);
@@ -83,6 +85,7 @@ if (isset($_POST['update_product'])) {
             `slug`='$slug',
             `tagline`='$tagline',
             `description`='$description',
+            `long_description`='$long_description',
             `image`='$image',
             `banner_image`='$banner_image',
             `available_varieties`='$varieties',
@@ -195,6 +198,12 @@ if (isset($_POST['update_product'])) {
 								<label class="form-label fw-bold">Technical Specifications (Rich Text CKEditor - Optional)</label>
 								<textarea name="specifications" id="editor_edit_specs" class="form-control ckeditor" rows="5"><?= htmlspecialchars($p['specifications']) ?></textarea>
 								<small class="text-muted">Leave blank to hide the Specifications table on the product page.</small>
+							</div>
+
+							<div class="col-12">
+								<label class="form-label fw-bold">Long Description (Below Specifications Table - Rich Text CKEditor - Optional)</label>
+								<textarea name="long_description" id="editor_edit_long_desc" class="form-control ckeditor" rows="8"><?= htmlspecialchars($p['long_description'] ?? '') ?></textarea>
+								<small class="text-muted">Appears directly below the Technical &amp; Quality Parameters table on the product detail page. Leave blank to hide.</small>
 							</div>
 
 							<div class="col-12">

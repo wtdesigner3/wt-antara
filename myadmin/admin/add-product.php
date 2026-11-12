@@ -1,6 +1,7 @@
 <?php 
 require('checksession.php'); 
 require('../inc/function.php');
+ensure_product_long_description_column();
 
 $msg = "";
 $error = "";
@@ -12,6 +13,7 @@ if (isset($_POST['add_product'])) {
     $slug = mysqli_real_escape_string($conn, strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $_POST['slug'] ?: $_POST['name']))));
     $tagline = mysqli_real_escape_string($conn, $_POST['tagline']);
     $description = mysqli_real_escape_string($conn, $_POST['description']);
+    $long_description = mysqli_real_escape_string($conn, $_POST['long_description'] ?? '');
     $varieties = mysqli_real_escape_string($conn, $_POST['available_varieties']);
     $brands = mysqli_real_escape_string($conn, $_POST['brands']);
     $specifications = mysqli_real_escape_string($conn, $_POST['specifications']);
@@ -71,9 +73,9 @@ if (isset($_POST['add_product'])) {
 
     // Insert into tbl_product
     $sql = "INSERT INTO `tbl_product` 
-            (`category_id`, `division`, `name`, `slug`, `tagline`, `description`, `image`, `banner_image`, `available_varieties`, `brands`, `specifications`, `packaging`, `moq`, `applications`, `badge1_icon`, `badge1_title`, `badge1_desc`, `badge2_icon`, `badge2_title`, `badge2_desc`, `badge3_icon`, `badge3_title`, `badge3_desc`, `sort`, `status`) 
+            (`category_id`, `division`, `name`, `slug`, `tagline`, `description`, `long_description`, `image`, `banner_image`, `available_varieties`, `brands`, `specifications`, `packaging`, `moq`, `applications`, `badge1_icon`, `badge1_title`, `badge1_desc`, `badge2_icon`, `badge2_title`, `badge2_desc`, `badge3_icon`, `badge3_title`, `badge3_desc`, `sort`, `status`) 
             VALUES 
-            ($cat_id, '$division', '$name', '$slug', '$tagline', '$description', '$image', '$banner_image', '$varieties', '$brands', '$specifications', '$packaging', '$moq', '$applications', '$badge1_icon', '$badge1_title', '$badge1_desc', '$badge2_icon', '$badge2_title', '$badge2_desc', '$badge3_icon', '$badge3_title', '$badge3_desc', $sort, $status)";
+            ($cat_id, '$division', '$name', '$slug', '$tagline', '$description', '$long_description', '$image', '$banner_image', '$varieties', '$brands', '$specifications', '$packaging', '$moq', '$applications', '$badge1_icon', '$badge1_title', '$badge1_desc', '$badge2_icon', '$badge2_title', '$badge2_desc', '$badge3_icon', '$badge3_title', '$badge3_desc', $sort, $status)";
     
     if (mysqli_query($conn, $sql)) {
         header("Location: manage-products.php?msg=" . urlencode("Product added successfully!"));
@@ -156,6 +158,12 @@ if (isset($_POST['add_product'])) {
 								<label class="form-label fw-bold">Technical Specifications (Rich Text CKEditor - Optional)</label>
 								<textarea name="specifications" id="editor_product_specs" class="form-control ckeditor" rows="5" placeholder="e.g. Moisture: <= 12%; Screen Size: 17/18; Shelf Life: 12 Months (Leave blank to hide)"></textarea>
 								<small class="text-muted">Leave blank to hide the Specifications table on the product page.</small>
+							</div>
+
+							<div class="col-12">
+								<label class="form-label fw-bold">Long Description (Below Specifications Table - Rich Text CKEditor - Optional)</label>
+								<textarea name="long_description" id="editor_product_long_desc" class="form-control ckeditor" rows="8" placeholder="Detailed origin narrative, grading guidelines, harvest season, export compliance, or brewing notes displayed right below the Technical Parameters table... (Leave blank to hide)"></textarea>
+								<small class="text-muted">Appears directly below the Technical &amp; Quality Parameters table on the product detail page. Leave blank to hide.</small>
 							</div>
 
 							<div class="col-12">

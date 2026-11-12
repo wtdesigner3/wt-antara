@@ -1,6 +1,7 @@
 <?php 
 require('checksession.php'); 
 require('../inc/function.php');
+ensure_product_long_description_column();
 
 $msg = "";
 $error = "";

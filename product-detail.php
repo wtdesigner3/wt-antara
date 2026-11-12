@@ -18,17 +18,19 @@ require_once __DIR__ . '/inc/header.php';
 // Parse Available Varieties
 $varieties_list = array_map('trim', explode(',', $product['available_varieties']));
 
-// Parse Specifications (split by semicolon if present)
-$raw_specs = strip_tags(html_entity_decode($product['specifications'] ?? ''));
+// Parse Specifications (split by semicolon or HTML block breaks, preserving <= / < symbols)
+$raw_specs_html = html_entity_decode($product['specifications'] ?? '', ENT_QUOTES, 'UTF-8');
+$raw_specs_norm = str_ireplace(['</p>', '<br>', '<br/>', '<br />', '</li>', '</div>'], ';', $raw_specs_html);
+$raw_specs = trim(preg_replace('/<\/?[a-zA-Z][a-zA-Z0-9]*(?:\s[^>]*)?>/', ' ', $raw_specs_norm));
 $specs_array = [];
 if (strpos($raw_specs, ';') !== false) {
     $pairs = explode(';', $raw_specs);
     foreach ($pairs as $pair) {
         if (strpos($pair, ':') !== false) {
             list($k, $v) = explode(':', $pair, 2);
-            $clean_k = trim($k);
-            $clean_v = trim($v);
-            if (!empty($clean_k)) {
+            $clean_k = trim(str_replace("\xc2\xa0", ' ', $k));
+            $clean_v = trim(str_replace("\xc2\xa0", ' ', $v));
+            if (!empty($clean_k) && $clean_v !== '') {
                 $specs_array[$clean_k] = $clean_v;
             }
         }
@@ -189,60 +191,91 @@ if (count($related_products) < 6) {
                                 <?php endif; ?>
                             </div>
 
-                            <!-- Technical Specifications Table -->
+                            <!-- Technical Specifications Table (Compact Modern Theme) -->
                             <?php 
-                            $has_specs = !empty($specs_array) || !empty(trim(strip_tags($product['specifications'] ?? '')));
+                            $has_specs = !empty($specs_array) || !empty(trim($raw_specs ?? ''));
                             if ($has_specs):
                             ?>
-                                <div class="mb-5">
-                                    <h4 class="mb-3 fw-bold" style="font-size: 22px; color: #123023; font-family: 'Instrument Sans';">
-                                        <i class="fa-solid fa-table-list text-warning me-2"></i> Technical &amp; Quality Parameters
-                                    </h4>
+                                <div class="mb-4">
+                                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-2">
+                                        <h4 class="mb-0 fw-bold d-flex align-items-center gap-2" style="font-size: 18px; color: #123023; font-family: 'Instrument Sans', sans-serif;">
+                                            <span class="antara-spec-title-dot"></span>
+                                            Technical &amp; Quality Parameters
+                                        </h4>
+                                        <span class="antara-spec-badge-tag">
+                                            <?= ($product['division'] == 'export') ? 'Export Spec Sheet' : 'HORECA Spec Sheet' ?>
+                                        </span>
+                                    </div>
                                     
-                                    <div class="spec-table-container shadow-sm border rounded-3 overflow-hidden">
-                                        <table class="table table-striped mb-0">
+                                    <div class="antara-spec-card">
+                                        <table class="antara-spec-table">
                                             <thead>
-                                                <tr style="background-color: #F4F6F5;">
-                                                    <th class="py-3 px-4 text-uppercase small fw-bold" style="width: 35%;">Parameter</th>
-                                                    <th class="py-3 px-4 text-uppercase small fw-bold">Commercial Specification</th>
+                                                <tr>
+                                                    <th style="width: 38%;">Parameter</th>
+                                                    <th>Commercial Specification</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td class="py-3 px-4 fw-semibold text-muted">Product Name</td>
-                                                    <td class="py-3 px-4 fw-bold text-dark"><?= clean_output($product['name']) ?></td>
+                                                    <td class="spec-param-cell">Product Name</td>
+                                                    <td class="spec-val-cell fw-bold" style="color: #123023;"><?= clean_output($product['name']) ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="py-3 px-4 fw-semibold text-muted">Division</td>
-                                                    <td class="py-3 px-4 text-dark"><?= ($product['division'] == 'export') ? 'Global Export Sourcing' : 'Restaurant, Café &amp; Hospitality Supply' ?></td>
+                                                    <td class="spec-param-cell">Division</td>
+                                                    <td class="spec-val-cell"><?= ($product['division'] == 'export') ? 'Global Export Sourcing' : 'Restaurant, Café &amp; Hospitality Supply' ?></td>
                                                 </tr>
                                                 <?php if (!empty($specs_array)): ?>
                                                     <?php foreach ($specs_array as $param => $val): ?>
                                                         <tr>
-                                                            <td class="py-3 px-4 fw-semibold text-muted"><?= clean_output($param) ?></td>
-                                                            <td class="py-3 px-4 text-dark"><?= clean_output($val) ?></td>
+                                                            <td class="spec-param-cell"><?= clean_output($param) ?></td>
+                                                            <td class="spec-val-cell"><?= clean_output($val) ?></td>
                                                         </tr>
                                                     <?php endforeach; ?>
                                                 <?php else: ?>
                                                     <tr>
-                                                        <td class="py-3 px-4 fw-semibold text-muted">Specifications</td>
-                                                        <td class="py-3 px-4 text-dark"><?= clean_output($product['specifications']) ?></td>
+                                                        <td class="spec-param-cell">Specifications</td>
+                                                        <td class="spec-val-cell"><?= clean_output($raw_specs) ?></td>
                                                     </tr>
                                                 <?php endif; ?>
                                                 <?php if (!empty(trim($product['packaging'] ?? ''))): ?>
                                                     <tr>
-                                                        <td class="py-3 px-4 fw-semibold text-muted">Packaging Format</td>
-                                                        <td class="py-3 px-4 text-dark"><?= clean_output($product['packaging']) ?></td>
+                                                        <td class="spec-param-cell">Packaging Format</td>
+                                                        <td class="spec-val-cell"><?= clean_output($product['packaging']) ?></td>
                                                     </tr>
                                                 <?php endif; ?>
                                                 <?php if (!empty(trim($product['moq'] ?? ''))): ?>
                                                     <tr>
-                                                        <td class="py-3 px-4 fw-semibold text-muted">Minimum Order Quantity</td>
-                                                        <td class="py-3 px-4 fw-bold text-success"><?= clean_output($product['moq']) ?></td>
+                                                        <td class="spec-param-cell">Minimum Order Quantity</td>
+                                                        <td class="spec-val-cell">
+                                                            <span class="antara-moq-pill"><?= clean_output($product['moq']) ?></span>
+                                                        </td>
                                                     </tr>
                                                 <?php endif; ?>
                                             </tbody>
                                         </table>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+
+                            <!-- Long Description Block (Rich Text from CKEditor) -->
+                            <?php
+                            $long_desc_raw = trim($product['long_description'] ?? '');
+                            $has_long_desc = !empty(trim(str_replace(["\xc2\xa0", '&nbsp;'], '', strip_tags($long_desc_raw))))
+                                             || stripos($long_desc_raw, '<img') !== false
+                                             || stripos($long_desc_raw, '<table') !== false;
+                            if ($has_long_desc):
+                            ?>
+                                <div class="mb-4">
+                                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-2">
+                                        <h4 class="mb-0 fw-bold d-flex align-items-center gap-2" style="font-size: 18px; color: #123023; font-family: 'Instrument Sans', sans-serif;">
+                                            <span class="antara-spec-title-dot"></span>
+                                            Detailed Product Overview
+                                        </h4>
+                                    </div>
+                                    <div class="antara-long-desc-card">
+                                        <div class="antara-long-desc-content">
+                                            <?= $long_desc_raw ?>
+                                        </div>
                                     </div>
                                 </div>
                             <?php endif; ?>

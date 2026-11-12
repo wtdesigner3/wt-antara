@@ -46,4 +46,18 @@ function upload_image($file_input_name, $target_dir = "../../uploads/") {
     }
     return false;
 }
+
+/**
+ * Ensure `long_description` column exists on `tbl_product`
+ */
+function ensure_product_long_description_column() {
+    global $conn;
+    static $checked = false;
+    if ($checked) return;
+    $checked = true;
+    $chk = @mysqli_query($conn, "SHOW COLUMNS FROM `tbl_product` LIKE 'long_description'");
+    if ($chk && mysqli_num_rows($chk) == 0) {
+        @mysqli_query($conn, "ALTER TABLE `tbl_product` ADD COLUMN `long_description` LONGTEXT NULL DEFAULT NULL AFTER `description`");
+    }
+}
 ?>
